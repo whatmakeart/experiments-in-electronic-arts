@@ -1,3 +1,36 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://whatmakeart.com/experiments-in-electronic-arts/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Experiments in Electronic Arts'
+theme = 'basicTheme'
+
+SectionPagesMenu = "main"
+Paginate = 18 # this is set low for demonstrating with dummy content. Set to a higher number
+googleAnalytics = "G-S4CF1KSMYD"
+enableRobotsTXT = true
+custom_css = "css/styles.css"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  
+  authorName = "Jimmy Kuehnle"
+  favicon = "/favicon/favicon.ico"
+  site_logo = "/img/whatmakeart-logo.png"
+  description = "Experiments in Electronic Arts"
+  facebook = ""
+  twitter = "https://twitter.com/whatmakeart"
+  instagram = "https://www.instagram.com/whatmakeart/"
+  youtube = "https://www.youtube.com/channel/UCmGXH-jy0o2CuhqtpxbaQgA"
+  github = ""
+  gitlab = ""
+  linkedin = ""
+  mastodon = ""
+  slack = ""
+  stackoverflow = ""
+  rss = ""
+
+[markup.goldmark.renderer]
+unsafe = true
