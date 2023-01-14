@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+
+<body>
+
+    {{ partial "header.html" . }}
+
+    <div class="container-fluid justify-content-center">
+        <main class="row" id="main">
+            <div class="col">
+                {{ block "main" . }}{{ end }}
+            </div>
+        </main>
+    </div>
+    {{ partial "footer.html" . }}
+    {{ partial "script.html" . }}
+
+</body>
+
+</html>

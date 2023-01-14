@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+html {
+  font-family: Lato, Helvetica, Arial, sans-serif; /* match Canvas LMS Fonts */
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+h1 {
+  font-size: 1.8em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+.container-fluid {
+  max-width: 1366px;
+  min-width: 301px;
+}
+.responsive-table-markdown {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.responsive-table-markdown > table {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.two-column-instructions-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  grid-gap: 0px;
+}
+
+.two-column-instructions-grid > * {
+  border-top: 1px solid red;
+}
+
+.tutorial-video-grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding-bottom: 2rem;
+  margin: 0 auto;
+}
+
+/* youtube tutorial video iframes */
+.iframe-16-9-container {
+  position: relative;
+  width: 100%;
+  height: 0px;
+  padding-top: 56.25%;
+}
+
+.youTubeIframe {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* width: 100%;
+  max-width: 400px;
+  */
+  justify-content: space-between;
+}
+
+/* summary on Hugo list pages */
+a.summary-link {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Title on Hugo list pages */
+a.title-link {
+  text-decoration: none;
+}
+/* from files */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.fit-img-jimmy {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image-box-jimmy {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.flex-container-jimmy {
+  display: flex;
+  align-items: top;
+  flex-wrap: wrap;
+}
+
+.half-box {
+  flex: 1 1 400px;
+}
+.half-box p {
+  margin-right: 1rem;
+}
+
+.caption-jimmy {
+  font-size: 14px;
+}
