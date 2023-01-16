@@ -18,7 +18,7 @@ Electronic Arts Intro
 
 Charged elections flow from one state to another usually from a negative charge to a positive charge while the current flows from the positive side to the negative side. Lighting and static electricity are examples of electricity in the natural environment. While light is cool to look at and it is fun to make your hair stand up with static electricity, neither are very useful in everyday scenarios. If this electron flow is directed through a conductor or wire in an electrical circuit it becomes much more practical. This current flow in a circuit can be used to do work such as turn on lights, make sounds, move motors, or run a heater.
 
-Two common types of electrical circuits are AC, alternating current, and DC, direct current. The mains voltage in the wall is alternating current. The electricity in cars and electronics is usually direct current.
+Two common types of electrical circuits are AC, alternating current, and DC, direct current. The mains voltage in the wall is alternating current. The electricity in cars and electronics is usually direct current. [^1]
 
 # Measuring Electricity
 
@@ -58,3 +58,5 @@ Power LEDs
 ## Single LED Shape
 
 Single LEDs or light emitting diodes have a long end the "anode" or positive + end and a short end the "cathode" or negative - end.
+
+[^1]: Footnote Test
