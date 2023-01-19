@@ -28,7 +28,7 @@ Electricity voltage potentials or gradients work in a similar way. For example i
 
 The phone needs to be charged to keep working and the power plant needs to be "charged" to keep sending electricity to the wall receptacle to charge the phone. Fuel or an energy source is converted to a voltage potential at the power plant to keep everything going. If a higher voltage potential isn't created then there won't be any current flow and we will just have electricity "puddles" on the ground and now more cat videos.
 
-Current can flow through solids or liquids. Liquids need something to tranfwr the electron for current to flow. Your body uses electric current flow to stay alive and you need salts and electrolytes to function properly. This is also why you shouldn't dry your hair I'm the shower, for multiple reasons.
+Current can flow through solids or liquids. Liquids need something to transfer the electron for current to flow. Your body uses electric current flow to stay alive and you need salts and electrolytes to function properly. This is also why you shouldn't dry your hair I'm the shower, for multiple reasons.
 
 Electricity doesn't just flow freely, it is slowed down by resistance. Your hand and the door knob has resistance. Metal wires generally have low resistance so current flows well through wires. As a general rule, a thinner wire has more resistance than a thick wire, and a longer wire has more resistance than a shorter wire
 
@@ -41,22 +41,5 @@ I = V/R
 Current = Voltage / Resistance
 
 ## Amps?, Watts?, Volts?, Ohms?, Joules?
-
-## Electrical Safety
-
-- Always unplug a device from it's power source or denergize a circuit before working on it
-- Don't assume a circuit is denenergized, confirm with appropriate testing equipment that has been confirmed working on a known live circuit
-- Never work with powered devices or circuits in wet or damp areas
-- Don't have exposed conductors or wires
-- Use tools with nonconductive handles and or coatings to reduce shock risk
-- Don't touch electrical devices with wet hands or with wet clothes
-- Keep workspace clear of debris and hazards
-- inspect cords and equipment before use, never use frayed cords, cords with damaged insulation, or damaged plugs
-
-Power LEDs
-
-## Single LED Shape
-
-Single LEDs or light emitting diodes have a long end the "anode" or positive + end and a short end the "cathode" or negative - end.
 
 [^1]: Footnote Test
