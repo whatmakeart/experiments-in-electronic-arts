@@ -278,6 +278,7 @@ draft: false
 </div>
 
 </div>
+
 ### [Arvind Sanjeev](https://arvindsanjeev.com/)
 
 [twitter thread about Ghostwriter](https://twitter.com/ArvindSanjeev/status/1598303946585821185)
