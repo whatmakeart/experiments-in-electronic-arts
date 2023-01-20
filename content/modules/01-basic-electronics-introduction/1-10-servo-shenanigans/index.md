@@ -25,7 +25,7 @@ Servo motors can move in precice arcs differently than a free spinning motor lik
 
 We will use the example Arduino Servo Sweep sketch by [BARRAGAN](http://barraganstudio.com). This code introduces a few new concepts that we will present briefly here but will investigate in more depth later in the semester.
 
-```C
+```
 
 #include <Servo.h>
 ```
