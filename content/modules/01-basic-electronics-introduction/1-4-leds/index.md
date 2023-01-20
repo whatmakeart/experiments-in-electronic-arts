@@ -28,6 +28,8 @@ How do you know what the value of a resistor is after it is out of its package? 
 
 ## LED Typical Voltages Vf
 
+<div class ="responsive-table-markdown">
+
 | LED Color | Voltage   |
 | --------- | --------- |
 | Red       | 1.8 - 2.1 |
@@ -37,7 +39,15 @@ How do you know what the value of a resistor is after it is out of its package? 
 | Blue      | 3 - 3.7   |
 | White     | 2 - 3.4   |
 
+</div>
+
 These values are from the electronics supplier Digikey.[^3] They also have a handy [LED resistor calculator](https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-led-series-resistor) as well as a [resistor color code calculator](https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-resistor-color-code).
+
+## Try it Yourself
+
+What would the resistor value be if you had a 5V power supply and a Green LED running at 20mA?
+
+What would the resistor value be if you had a 9V battery power supply and a Blue LED running at 20mA?
 
 [^1]: https://www.kingbrightusa.com/images/catalog/SPEC/WP7113LSRD.pdf
 [^2]: https://en.wikipedia.org/wiki/AA_battery]
