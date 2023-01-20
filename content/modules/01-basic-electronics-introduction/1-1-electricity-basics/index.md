@@ -4,21 +4,11 @@ date: 2020-01-26T23:11:13Z
 draft: false
 ---
 
-# What is a Breadboard?
-
-# Battery Power
-
-# Leds
-
-# Diode
-
-Electronic Arts Intro
-
-## Electricity Basics
+## What is Electricity?
 
 Charged elections flow from one state to another usually from a negative charge to a positive charge while the current flows from the positive side to the negative side. Lighting and static electricity are examples of electricity in the natural environment. While light is cool to look at and it is fun to make your hair stand up with static electricity, neither are very useful in everyday scenarios. If this electron flow is directed through a conductor or wire in an electrical circuit it becomes much more practical. This current flow in a circuit can be used to do work such as turn on lights, make sounds, move motors, or run a heater.
 
-Two common types of electrical circuits are AC, alternating current, and DC, direct current. The mains voltage in the wall is alternating current. The electricity in cars and electronics is usually direct current. [^1]
+Two common types of electrical circuits are AC, alternating current, and DC, direct current. The mains voltage in the wall is alternating current. The electricity in cars and electronics is usually direct current.
 
 # Measuring Electricity
 
@@ -34,12 +24,8 @@ Electricity doesn't just flow freely, it is slowed down by resistance. Your hand
 
 ## Ohm's Law
 
-The following famous equation known as Ohm's Law calculates electricity current flow. The Current is the voltage, potential for flow, divided by the resistance in the circuit.
+The following famous equation known as Ohm's Law calculates electricity current flow. The Current is the voltage, potential for flow, divided by the resistance in the circuit. The resistance measures how well or not well the current flows through the object. For example copper has low resistance while rubber has a high resistance.
 
 I = V/R
 
 Current = Voltage / Resistance
-
-## Amps?, Watts?, Volts?, Ohms?, Joules?
-
-[^1]: Footnote Test

@@ -4,6 +4,8 @@ date: 2020-01-26T23:11:13Z
 draft: false
 ---
 
+Electricity can be dangerous and deadly, even at low voltages. It is important to follow safety practices.
+
 ## Basic Electrical Safety Checklist
 
 - Always unplug a device from it's power source or denergize a circuit before working on it
