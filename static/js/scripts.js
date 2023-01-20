@@ -92,7 +92,8 @@ function removeNavigationEmbed() {
     document.getElementById("pageTitleH1").remove();
     console.log("Removed iframe #header and #footer");
     changeStyle(); // remove Bootstrap Styles
-    document.body.style.overflow = "visible"; // to remove iframe scrollbars when scrolling
+    document.body.style.overflowX = "hidden"; // to remove iframe scrollbars when scrolling
+    document.body.style.overflowY = "visible"; // to remove iframe scrollbars when scrolling
   }
   if (self === top) {
     console.log("Top level website so keep native navigation");
