@@ -32,6 +32,10 @@ Next is one of the most useful pieces of computer logic, the conditional if stat
 
 Then the `delay();` function is used to pause for 30 milliseconds. This value controls the speed of the fade.
 
+### fadeAmmount
+
+The `fadeAmmount` value controls the rate of increase of each step of brightness. If it is at the default of 5 then it steps up by 5 each time through the loop. If it is at 25 then it steps up in brightness by 25 each time through the loop.
+
 ```C
 
 int led = 9;         // the PWM pin the LED is attached to

@@ -70,8 +70,6 @@ void loop() {
 
 The next section of code is the `loop();` function. This function loops over and over again and controls the sweep of the servo motor arm. It uses two `for` loops. We will examine `for` loops later in the semester but basically they do somthing a certain ammount of times or until some condition is met. In this case they move the servo arm one direction until it gets to 180 and then they move the servo arm the other direction until it gets to zero. Then the process repeats.
 
-There are a few parameters that you can change to control the servo.
-
 ## Full Sweep Code
 
 ```C
@@ -99,3 +97,15 @@ void loop() {
   }
 }
 ```
+
+## Modifying the Servo Behavior
+
+There are a few parameters that you can change to control the servo.
+
+### Range of Position
+
+The first is the positional range. By default it runs from 0 - 180 but this could be changed to 0-50 or 66-98 or 45 - 176 or any other range. Make sure to change the range in both for loops. If the beginning and ending `pos` numbers don't match the servo will jump to the next position at the end of the loop.
+
+### Speed of Sweep
+
+The `delay();` function in both `for` loops controls the speed of the servo sweep. They default to 15 milliseconds. Decreasing these makes the servo sweep faster while increasing them makes it move slower. Since there are two `for` loops you can have different speeds for each direction.

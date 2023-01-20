@@ -4,6 +4,16 @@ date: 2020-01-26T23:11:13Z
 draft: false
 ---
 
+## Assignment Deliverables
+
+Upload scanned sketches and writing about 3 different project ideas.
+
+Label files in sequence YYYYMMDD Lastname Firstname project idea 1.jpg
+
+You may also comile all the information into a single PDF.
+
+## Description
+
 This course guides students through a semeseter long research project. We will begin that process now. In the begining wee will explore many ideas and possibilities. These will most likely change as the semester goes on and as you learn more techniques and concpets. We will also explore other assignments and projects during the course in addition to the culminating semester long project.
 
 You will keep a weekly project log documenting your project. You should collect your notes, photographs, videos, screenshots of research each week and compile it. The intial project ideation and sketches this week will be the beginning of your project log. We will document the ups and downs along the way to the outcome.
