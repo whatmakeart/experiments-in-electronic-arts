@@ -21,6 +21,16 @@ Servo motors can move in precice arcs differently than a free spinning motor lik
 5. Take a brief video to show the servo shenanigans. You can use a mobile device for the video. Make sure there is good lighting, (daytime window or a couple desk lamps)
 6. Save the video as an mp4 and upload it.
 
+## Hooking Up Servo to Arduino
+
+[![Servo Motor Wiring](servo-sweep-circuit.png)](servo-sweep-circuit.png)
+
+The servo motor has 3 wires.
+
+- The yellow wire is the control wire. This goes to pin 9 on the Arduino.
+- The red wire is the + wire and it goes to the positive rail on the breadboard or to 5V on the Arduino.
+- The brown wire is the - wire and it goes to the negative rail on the breadboard or to GND on the Arduino. [^1]
+
 ## Servo Sweep Example Sketch
 
 We will use the example Arduino Servo Sweep sketch by [BARRAGAN](http://barraganstudio.com). This code introduces a few new concepts that we will present briefly here but will investigate in more depth later in the semester.
@@ -109,3 +119,5 @@ The first is the positional range. By default it runs from 0 - 180 but this coul
 ### Speed of Sweep
 
 The `delay();` function in both `for` loops controls the speed of the servo sweep. They default to 15 milliseconds. Decreasing these makes the servo sweep faster while increasing them makes it move slower. Since there are two `for` loops you can have different speeds for each direction.
+
+[^1]: https://docs.arduino.cc/learn/electronics/servo-motors
