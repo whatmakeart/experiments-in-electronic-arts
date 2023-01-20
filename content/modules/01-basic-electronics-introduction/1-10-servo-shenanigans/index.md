@@ -4,9 +4,26 @@ date: 2020-01-26T23:11:13Z
 draft: false
 ---
 
-Servo motors can move in precice arcs differently than a free spinning motor like an electric drill. This control ability offers unique possibilites for projects. We will use the example Arduino Servo Sweep sketch by [BARRAGAN](http://barraganstudio.com).
+## Assignment Deliverables
 
-This code introduces a few new concepts that we will present briefly here but will investigate in more depth later in the semester.
+Upload a 5 second to 30 second video of your servo motor interacting with the environment.
+
+Label the file YYYYMMDD Lastname Firstname Servo Video.mp4
+
+## Process
+
+Servo motors can move in precice arcs differently than a free spinning motor like an electric drill. This control ability offers unique possibilites for projects.
+
+1. Attach your servo motor to the Arduino and upload the example sketch.
+2. Modify the parameters to change the behavior of the servo motor.
+3. Then attach objects to the arms of the servo or attach the servo to an object. Make it interact with the environment in interesting ways. This could be as simple as taping a cutout paper hand and arm to the servo so it can wave.
+4. Use your immagination and have fun.
+5. Take a brief video to show the servo shenanigans. You can use a mobile device for the video. Make sure there is good lighting, (daytime window or a couple desk lamps)
+6. Save the video as an mp4 and upload it.
+
+## Servo Sweep Example Sketch
+
+We will use the example Arduino Servo Sweep sketch by [BARRAGAN](http://barraganstudio.com). This code introduces a few new concepts that we will present briefly here but will investigate in more depth later in the semester.
 
 ```C
 
@@ -54,6 +71,8 @@ void loop() {
 The next section of code is the `loop();` function. This function loops over and over again and controls the sweep of the servo motor arm. It uses two `for` loops. We will examine `for` loops later in the semester but basically they do somthing a certain ammount of times or until some condition is met. In this case they move the servo arm one direction until it gets to 180 and then they move the servo arm the other direction until it gets to zero. Then the process repeats.
 
 There are a few parameters that you can change to control the servo.
+
+## Full Sweep Code
 
 ```C
 
