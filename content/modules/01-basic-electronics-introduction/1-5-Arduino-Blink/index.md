@@ -24,7 +24,17 @@ void setup() {
 
 ## loop function
 
-The loop function is the heart of an Arduino sketch. It loops over and over and over and over again. It just keeps looping very fast unless you add a `delay` to your code or otherwise intentionally slow it down. The `loop();` function uses two functions, `digitalWrite();` and `delay();`.
+The loop function is the heart of an Arduino sketch. It loops over and over and over and over again. It just keeps looping very fast unless you add a `delay` to your code or otherwise intentionally slow it down. The `loop();` function uses two functions, `digitalWrite();` and `delay();`. The `digitalWrite();` function tells the `LED_BUILTIN` or the LED on the Ardunio to go `HIGH`. What does that mean?
+
+The Arduino pins operate at 5V and can either send 0V or 5V. This is like sending a digital signal or 1s and 0s. When it sends 5V the Arduino pin is considered `HIGH` or on. When it sends 0V the Arduino pin is considered `LOW` or off.
+
+Then the `delay();` function tells the Arduino to wait 1000 milliseconds or 1 second.
+
+Then the `digitalWrite();` function tells the `LED_BUILTIN` to go `LOW` or turn off.
+
+Then the `delay();` function tells the Arduino to wait 1000 milliseconds or 1 second.
+
+Then since this is the `loop();` function it goes on until the end of time or if you remove power from the Arduino.
 
 ```C
 
@@ -61,3 +71,12 @@ void loop() {
 ```
 
 More information about this example blink code from Arduino is available on the [Ardunio Website](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink)
+
+## Let's Try
+
+Try the next couple of code modifications on your own.
+
+1. How can you make the LED blink faster? (Hint: Change the value in the `delay();` function.)
+2. How can you make the LED blink slower? (Hint: Change the value in the `delay();` function.)
+3. How can you make the LED blink on and off for different ammounts of time? (Hint: Change the values in the `delay();` function to be different.)
+4. How can you make the LED have a sequence of blinks of varrying duration? (Hint: Add multiple `digitalWrite();` and `delay();` functions after the initial blink and change the values in the `delay();` functions.)
