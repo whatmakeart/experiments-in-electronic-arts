@@ -10,9 +10,27 @@ This module introduces electricity, electronics, circuits, safety, LEDs, resisto
 
 ## Learning Objectives
 
-- Gain basic understading of electricity and electric circuits
+- Gain basic understanding of electricity and electric circuits
 - Experiment with electrical circuits
 - Learn about the Arduino and the Arduino IDE
 - Wire up an LED to an Arduino with a breadboard and a resistor
 - Upload a sketch to the Arduino to blink an LED
 - Modify a sketch to change the blink rate of the LED
+
+## Keywords / Terms
+
+- Volt
+- Current
+- Resistance
+- Resistor
+- Breadboard
+- Jumper Cable
+- Arduino
+- Function
+- Variable
+- Millisecond
+- Servo Motor
+- LED - Light Emitting Diode
+- AC
+- DC
+- Product Data Sheet
