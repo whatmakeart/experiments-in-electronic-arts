@@ -4,7 +4,7 @@ date: 2020-01-26T23:11:13Z
 draft: false
 ---
 
-[![Blink without delay circuit](blink-without-delay-cicuit-image-from-arduino-docs.png)](blink-without-delay-cicuit-image-from-arduino-docs.png) [^1]
+[![Blink without delay circuit](blink-without-delay-circuit-image-from-arduino-docs.png)](blink-without-delay-circuit-image-from-arduino-docs.png) [^1]
 
 ```C
 /*

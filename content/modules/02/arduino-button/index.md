@@ -4,11 +4,11 @@ date: 2020-01-26T23:11:13Z
 draft: false
 ---
 
-[![Arduino Button Circuit Image](arduino-button-diagram-from-arduino-docs.png)](<(arduino-button-diagram-from-arduino-docs.png)>) [^1]
+[![Arduino Button Circuit Image](arduino-button-circuit-diagram-from-arduino-docs.png)](arduino-button-circuit-diagram-from-arduino-docs.png) [^1]
 
 above footnote on same line and below with one line space
 
-[![Arduino Button Circuit Image](arduino-button-diagram-from-arduino-docs.png)](<(arduino-button-diagram-from-arduino-docs.png)>)
+[![Arduino Button Circuit Image](arduino-button-circuit-diagram-from-arduino-docs.png)](arduino-button-circuit-diagram-from-arduino-docs.png)
 
 [^1]
 
