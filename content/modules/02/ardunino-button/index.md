@@ -1,3 +1,17 @@
+---
+title: "Arduino Button"
+date: 2020-01-26T23:11:13Z
+draft: false
+---
+
+[![Arduino Button Circuit Image](arduino-button-diagram-from-arduino-docs.png)](<(arduino-button-diagram-from-arduino-docs.png)>) [^1]
+
+above footnote on same line and below with one line space
+
+[![Arduino Button Circuit Image](arduino-button-diagram-from-arduino-docs.png)](<(arduino-button-diagram-from-arduino-docs.png)>)
+
+[^1]
+
 ```C
 /*
   Button
@@ -51,9 +65,5 @@ void loop() {
   }
 }
 ```
-
-[![Arduino Button Circuit Image](arduino-button-diagram-from-arduino-docs.png)](<(arduino-button-diagram-from-arduino-docs.png)>)
-
-[^1]
 
 [^1]: [Image](https://docs.arduino.cc/built-in-examples/digital/Buttons) by [Arduino](https://www.arduino.cc/) [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)

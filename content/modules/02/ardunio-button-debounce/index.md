@@ -1,4 +1,10 @@
-![Arduino Button Debounce](arduino-button-debounce-from-arduino-docs.png)
+---
+title: "Arduino Button Debounce"
+date: 2020-01-26T23:11:13Z
+draft: false
+---
+
+![Arduino Button Debounce](arduino-button-debounce-from-arduino-docs.png) [^1]
 
 ```C
 /*
@@ -89,4 +95,4 @@ void loop() {
 }
 ```
 
-by [Arduino](https://www.arduino.cc/) [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+[^1]: [Image](https://docs.arduino.cc/built-in-examples/digital/Debounce) by [Arduino](https://www.arduino.cc/) [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
