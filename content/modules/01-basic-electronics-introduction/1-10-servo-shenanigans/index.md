@@ -120,4 +120,4 @@ The first is the positional range. By default it runs from 0 - 180 but this coul
 
 The `delay();` function in both `for` loops controls the speed of the servo sweep. They default to 15 milliseconds. Decreasing these makes the servo sweep faster while increasing them makes it move slower. Since there are two `for` loops you can have different speeds for each direction.
 
-[^1]: https://docs.arduino.cc/learn/electronics/servo-motors
+[^1]: [Image](https://docs.arduino.cc/learn/electronics/servo-motors) by [Arduino](https://www.arduino.cc/) [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
