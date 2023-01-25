@@ -12,12 +12,12 @@ Label the file YYYYMMDD Lastname Firstname Servo Video.mp4
 
 ## Process
 
-Servo motors can move in precice arcs differently than a free spinning motor like an electric drill. This control ability offers unique possibilites for projects.
+Servo motors can move in precise arcs differently than a free spinning motor like an electric drill. This control ability offers unique possibilities for projects.
 
 1. Attach your servo motor to the Arduino and upload the example sketch.
 2. Modify the parameters to change the behavior of the servo motor.
 3. Then attach objects to the arms of the servo or attach the servo to an object. Make it interact with the environment in interesting ways. This could be as simple as taping a cutout paper hand and arm to the servo so it can wave.
-4. Use your immagination and have fun.
+4. Use your imagination and have fun.
 5. Take a brief video to show the servo shenanigans. You can use a mobile device for the video. Make sure there is good lighting, (daytime window or a couple desk lamps)
 6. Save the video as an mp4 and upload it.
 
@@ -78,7 +78,7 @@ void loop() {
 }
 ```
 
-The next section of code is the `loop();` function. This function loops over and over again and controls the sweep of the servo motor arm. It uses two `for` loops. We will examine `for` loops later in the semester but basically they do somthing a certain ammount of times or until some condition is met. In this case they move the servo arm one direction until it gets to 180 and then they move the servo arm the other direction until it gets to zero. Then the process repeats.
+The next section of code is the `loop();` function. This function loops over and over again and controls the sweep of the servo motor arm. It uses two `for` loops. We will examine `for` loops later in the semester but basically they do something a certain amount of times or until some condition is met. In this case they move the servo arm one direction until it gets to 180 and then they move the servo arm the other direction until it gets to zero. Then the process repeats.
 
 ## Full Sweep Code
 
@@ -120,4 +120,4 @@ The first is the positional range. By default it runs from 0 - 180 but this coul
 
 The `delay();` function in both `for` loops controls the speed of the servo sweep. They default to 15 milliseconds. Decreasing these makes the servo sweep faster while increasing them makes it move slower. Since there are two `for` loops you can have different speeds for each direction.
 
-[^1]: [Image](https://docs.arduino.cc/learn/electronics/servo-motors) by [Arduino](https://www.arduino.cc/) [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+[^1]: [Circuit](https://docs.arduino.cc/learn/electronics/servo-motors) by [Arduino](https://www.arduino.cc/) [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
