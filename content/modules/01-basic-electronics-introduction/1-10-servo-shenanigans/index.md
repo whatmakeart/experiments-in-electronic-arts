@@ -136,4 +136,16 @@ The first is the positional range. By default it runs from 0 - 180 but this coul
 
 The `delay();` function in both `for` loops controls the speed of the servo sweep. They default to 15 milliseconds. Decreasing these makes the servo sweep faster while increasing them makes it move slower. Since there are two `for` loops you can have different speeds for each direction.
 
+### Arduino Servo Library Reference
+
+The included [servo library](https://www.arduino.cc/reference/en/libraries/servo/) at the top of the sketch can do more than this example. Some additional functions to try are listed below. [^2]
+
+- `attach()` - Attaches a servo to a pin on the Arduino. It is used in the `setup();` function of this example sketch.
+- `write()` - Tells the servo a specific position to go to, for example `myservo.write(56);` tells the servo to go to 56 degrees. In the sketch above the variable `pos` is used instead of a hardcoded value but numbers can be used in this function as well.
+- `writeMicroseconds()` - Some servos can be more precise that 0 - 180 degrees and can be written from 1000 - 2000 microseconds using this function.
+- `read()` - "Reads" the last value the `write()` function sent to the servo.
+- `attached()` - Check to see if an Arduino pin is being used by the servo.
+- `detach()` - Removes the servo from the Arduino pin.
+
 [^1]: https://docs.arduino.cc/learn/electronics/servo-motors
+[^2]: https://www.arduino.cc/reference/en/libraries/servo/

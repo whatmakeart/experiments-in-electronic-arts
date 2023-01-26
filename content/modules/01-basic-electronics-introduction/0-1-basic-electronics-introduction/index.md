@@ -33,4 +33,4 @@ This module introduces electricity, electronics, circuits, safety, LEDs, resisto
 - LED - Light Emitting Diode
 - AC
 - DC
-- Product Data Sheet
+- Product Datasheet
