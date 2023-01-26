@@ -1,5 +1,5 @@
 ---
-title: "02 - Sensing"
+title: "2.04 Arduino Potentiometer Servo LED"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---

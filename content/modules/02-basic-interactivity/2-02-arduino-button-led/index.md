@@ -1,5 +1,5 @@
 ---
-title: "Arduino Button"
+title: "2.02 Arduino Button LED"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---
@@ -92,7 +92,7 @@ void loop() {
 
 This is the full sketch that you can copy and send to the Arduino once you set up the circuit. This example is also in the Arduino IDE.
 
-```C
+```C++
 /*
   Button
 

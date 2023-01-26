@@ -32,5 +32,25 @@ custom_css = "css/styles.css"
   stackoverflow = ""
   rss = ""
 
-[markup.goldmark.renderer]
-unsafe = true
+[params.assets]
+disableHLJS = true
+
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'arduino'
+    tabWidth = 4
+    
+
+
