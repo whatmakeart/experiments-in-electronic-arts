@@ -81,4 +81,4 @@ void loop() {
 
 ```
 
-[^1]: [Circuit](https://docs.arduino.cc/built-in-examples/digital/BlinkWithoutDelay) by [Arduino](https://www.arduino.cc/) [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+[^1]: [Circuit](https://docs.arduino.cc/built-in-examples/digital/BlinkWithoutDelay) by [Arduino](https://www.arduino.cc/) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)

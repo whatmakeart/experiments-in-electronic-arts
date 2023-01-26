@@ -21,15 +21,26 @@ Servo motors can move in precise arcs differently than a free spinning motor lik
 5. Take a brief video to show the servo shenanigans. You can use a mobile device for the video. Make sure there is good lighting, (daytime window or a couple desk lamps)
 6. Save the video as an mp4 and upload it.
 
-## Hooking Up Servo to Arduino
+## Servo Example Circuit
+
+<figure>
 
 [![Servo Motor Wiring](servo-sweep-circuit.png)](servo-sweep-circuit.png)
 
-The servo motor has 3 wires.
+<figcaption>
+
+[The Sweep Circuit](https://docs.arduino.cc/learn/electronics/servo-motors) by [Arduino](https://www.arduino.cc/) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) [^1]
+
+</figcaption>
+</figure>
+
+### Hooking Up Servo to Arduino
+
+The servo motor in this example has 3 wires.
 
 - The yellow wire is the control wire. This goes to pin 9 on the Arduino.
 - The red wire is the + wire and it goes to the positive rail on the breadboard or to 5V on the Arduino.
-- The brown wire is the - wire and it goes to the negative rail on the breadboard or to GND on the Arduino. [^1]
+- The brown wire is the - wire and it goes to the negative rail on the breadboard or to GND on the Arduino.
 
 ## Servo Sweep Example Sketch
 
@@ -54,6 +65,8 @@ One of those new commands is `Servo`. This command is like declaring a variable.
 
 In the next line a integer variable `pos` to indicate position is declared with an initial value of 0. This is the variable that will decide what rotational position the servo will move to.
 
+### setup function
+
 ```C
 
 void setup() {
@@ -62,6 +75,8 @@ void setup() {
 ```
 
 The next section of the code is the `setup();` function. This function runs only once and it tells the Arduino what pin the servo is attached to. In this case it uses pin 9.
+
+### loop function
 
 ```C
 
@@ -106,6 +121,7 @@ void loop() {
     delay(15);                       // waits 15 ms for the servo to reach the position
   }
 }
+
 ```
 
 ## Modifying the Servo Behavior
@@ -120,4 +136,4 @@ The first is the positional range. By default it runs from 0 - 180 but this coul
 
 The `delay();` function in both `for` loops controls the speed of the servo sweep. They default to 15 milliseconds. Decreasing these makes the servo sweep faster while increasing them makes it move slower. Since there are two `for` loops you can have different speeds for each direction.
 
-[^1]: [Circuit](https://docs.arduino.cc/learn/electronics/servo-motors) by [Arduino](https://www.arduino.cc/) [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+[^1]: https://docs.arduino.cc/learn/electronics/servo-motors

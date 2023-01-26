@@ -10,3 +10,7 @@ The Arduino forums are a great place to ask questions about projects and to sear
 
 - [Make old telephones ring](https://forum.arduino.cc/t/making-old-telephone-s-ring/60821/9)
 - [Daft Punk Inspired LED Light Chase](https://forum.arduino.cc/index.php?topic=200736.0)
+
+## Electronics Tools
+
+- [Voltage Drop Calculator](https://www.calculator.net/voltage-drop-calculator.html)
