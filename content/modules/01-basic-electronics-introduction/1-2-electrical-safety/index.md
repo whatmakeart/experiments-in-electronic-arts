@@ -8,8 +8,8 @@ Electricity can be dangerous and deadly, even at low voltages. It is important t
 
 ## Basic Electrical Safety Checklist
 
-- Always unplug a device from it's power source or denergize a circuit before working on it
-- Don't assume a circuit is denenergized, confirm with appropriate testing equipment that has been confirmed working on a known live circuit
+- Always unplug a device from it's power source or de-energize a circuit before working on it
+- Don't assume a circuit is de-energized, confirm with appropriate testing equipment that has been confirmed working on a known live circuit
 - Never work with powered devices or circuits in wet or damp areas
 - Don't have exposed conductors or wires
 - Use tools with nonconductive handles and or coatings to reduce shock risk

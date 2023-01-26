@@ -14,7 +14,7 @@ The example circuit and sketch below is one of the most basic programs for the A
 
 <figcaption>
 
-[Circuit](https://docs.arduino.cc/built-in-examples/basics/Blink) by [Arduino](https://www.arduino.cc/) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) [^1]
+[Circuit](https://docs.arduino.cc/built-in-examples/basics/Blink) by [Arduino](https://www.arduino.cc/) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) [^1]
 
 </figcaption>
 </figure>

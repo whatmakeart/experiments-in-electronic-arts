@@ -10,7 +10,7 @@ draft: false
 
 <figcaption>
 
-[Circuit](https://docs.arduino.cc/built-in-examples/digital/Buttons) by [Arduino](https://www.arduino.cc/) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) [^1]
+[Circuit](https://docs.arduino.cc/built-in-examples/digital/Buttons) by [Arduino](https://www.arduino.cc/) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) [^1]
 
 </figcaption>
 </figure>
