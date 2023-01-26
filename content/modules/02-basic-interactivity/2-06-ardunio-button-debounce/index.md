@@ -4,7 +4,18 @@ date: 2020-01-26T23:11:13Z
 draft: false
 ---
 
-![Arduino Button Debounce](arduino-button-debounce-from-arduino-docs.png) [^1]
+## Arduino Button Debounce Example Circuit
+
+<figure>
+
+![Arduino Button Debounce](arduino-button-debounce-from-arduino-docs.png)
+
+<figcaption>
+
+[Circuit](https://docs.arduino.cc/built-in-examples/digital/Debounce) by [Arduino](https://www.arduino.cc/) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) [^1]
+
+</figcaption>
+</figure>
 
 ```C
 /*
@@ -95,4 +106,4 @@ void loop() {
 }
 ```
 
-[^1]: [Circuit](https://docs.arduino.cc/built-in-examples/digital/Debounce) by [Arduino](https://www.arduino.cc/) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+[^1]: https://docs.arduino.cc/built-in-examples/digital/Debounce

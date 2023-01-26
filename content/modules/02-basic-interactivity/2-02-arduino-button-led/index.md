@@ -14,7 +14,7 @@ Buttons are one of the most common ways to capture user input. Buttons are used 
 
 <figcaption>
 
-Image made with Tinkercad Circuits [^2]
+Image made with [Tinkercad Circuits](https://www.tinkercad.com/circuits) [^2]
 
 </figcaption>
 </figure>
@@ -36,7 +36,7 @@ Image from [E-Switch](https://www.e-switch.com/) TL1105 [datasheet](https://www.
 </figcaption>
 </figure>
 
-## Example Arduion LED Button Sketch
+## Example Arduino LED Button Sketch
 
 ### Variables
 
@@ -147,5 +147,5 @@ void loop() {
 ```
 
 [^1]: https://docs.arduino.cc/built-in-examples/digital/Buttons
-[^2]: https://www.tinkercad.com/
+[^2]: https://www.tinkercad.com/circuits
 [^3]: https://www.e-switch.com/wp-content/uploads/2022/06/TL1105.pdf [(Archive)](TL1105.pdf)
