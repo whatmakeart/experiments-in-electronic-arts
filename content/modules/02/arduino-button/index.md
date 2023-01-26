@@ -4,13 +4,16 @@ date: 2020-01-26T23:11:13Z
 draft: false
 ---
 
-[![Arduino Button Circuit Image](arduino-button-circuit-diagram-from-arduino-docs.png)](arduino-button-circuit-diagram-from-arduino-docs.png) [^1]
-
-above footnote on same line and below with one line space
+<figure>
 
 [![Arduino Button Circuit Image](arduino-button-circuit-diagram-from-arduino-docs.png)](arduino-button-circuit-diagram-from-arduino-docs.png)
 
-[^1]
+<figcaption>
+
+[Circuit](https://docs.arduino.cc/built-in-examples/digital/Buttons) by [Arduino](https://www.arduino.cc/) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) [^1]
+
+</figcaption>
+</figure>
 
 ```C
 /*
@@ -66,4 +69,4 @@ void loop() {
 }
 ```
 
-[^1]: [Circuit](https://docs.arduino.cc/built-in-examples/digital/Buttons) by [Arduino](https://www.arduino.cc/) [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+[^1]: https://docs.arduino.cc/built-in-examples/digital/Buttons
