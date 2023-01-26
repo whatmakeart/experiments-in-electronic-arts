@@ -29,7 +29,7 @@ Servo motors can move in precise arcs differently than a free spinning motor lik
 
 <figcaption>
 
-[The Sweep Circuit](https://docs.arduino.cc/learn/electronics/servo-motors) by [Arduino](https://www.arduino.cc/) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) [^1]
+[The Sweep Circuit](https://docs.arduino.cc/learn/electronics/servo-motors) by [Arduino](https://www.arduino.cc/) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) [^1]
 
 </figcaption>
 </figure>
