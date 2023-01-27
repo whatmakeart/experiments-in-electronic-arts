@@ -34,3 +34,7 @@ While these are experiments and kinetic sketches, we still want to add enough st
 - Use random numbers to introduce "unpredictability" to make it seem more alive or real. When the knob turns it could turn the servo 2 degrees plus a random number that could even make it go backwards. `random()` + `randomSeed()` with `min() max()` can accomplish this. Example code and circuit will be added here.
 
 - Use button to switch between the the Potentiometer controling LEDs or a servo. Example code and circuit will be added here.
+
+- Add translucent materials over LEDs
+
+- Seperate the buttons and the LEDs / Servo with longer wires
