@@ -4,7 +4,9 @@ date: 2020-01-26T23:11:13Z
 draft: false
 ---
 
-Buttons are one of the most common ways to capture user input. Buttons are used in video game controllers, microwaves, cars, heated toilet seats, gas station pumps, computer keyboards and so many more devices. We will use a button to control and LED by switching it on and off.
+Buttons are one of the most common ways to capture user input. Buttons are used in video game controllers, microwaves, cars, heated toilet seats, gas station pumps, computer keyboards and so many more devices.
+
+In the previous example we captured that input with the Serial Monitor as 1's and 0's. This can be thought of as on and off. We will use a button to control and LED by switching it on and off.
 
 ## Arduino Button Example Circuit [^1]
 

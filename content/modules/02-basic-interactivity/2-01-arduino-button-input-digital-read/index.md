@@ -31,7 +31,7 @@ It sets up an integer variable `int pushButton = 2;` at the beginning of the ske
 
 ### Setup Function
 
-The `setup();` function starts the serial communication protocol at 9600 bits per second. There are faster and slower serial communication speeds. It also sets an Arduino pin to `INPUT` rather than the `OUTPUT` that was used for the blink LED and servo sketches. This will get input from a device connected to `pushButton` which has a value of 2 refering to pin 2.
+The `setup();` function starts the serial communication protocol at 9600 bits per second. There are faster and slower serial communication speeds. It also sets an Arduino pin to `INPUT` rather than the `OUTPUT` that was used for the blink LED and servo sketches. This will get input from a device connected to `pushButton` which has a value of 2 referring to pin 2.
 
 ```C
 // the setup routine runs once when you press reset:
