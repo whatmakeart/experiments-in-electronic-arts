@@ -18,6 +18,19 @@ You can use the example sketches with user input from this lesson. Below are som
 
 This can be an expansion and refinement of your original "Servo Shenanigans". It could add additional servos or LEDs.
 
+## Instructions
+
+While these are experiments and kinetic sketches, we still want to add enough structure and other materials to make them interesting and useable. Remember that the combination of electronics with other techniques tends to make more interesting and creative output.
+
+### Consider
+
+- Hot glue to keep things in place
+- Use scrap wood and hot glueto build quick structures
+- Use wire to make mechanical parts
+- Cover objects with scrap fabric
+
 ## Things to Try
 
-- Use random numbers to introduce "unpredictability" to make it seem more alive or real. When the knob turns it could turn the servo 2 degrees plus a random number that could even make it go backwards. `random()` + `randomSeed()` with `min() max()` can accomplish this. Example code will be added here.
+- Use random numbers to introduce "unpredictability" to make it seem more alive or real. When the knob turns it could turn the servo 2 degrees plus a random number that could even make it go backwards. `random()` + `randomSeed()` with `min() max()` can accomplish this. Example code and circuit will be added here.
+
+- Use button to switch between the the Potentiometer controling LEDs or a servo. Example code and circuit will be added here.
