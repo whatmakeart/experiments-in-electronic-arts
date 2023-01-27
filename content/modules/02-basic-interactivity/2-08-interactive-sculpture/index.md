@@ -6,9 +6,9 @@ draft: false
 
 ## Assignment Deliverables
 
-Upload a 5 second to 30 second video of an interactive sculpture reacting to user input.
+1. Upload a 5 second to 30 second video of an interactive sculpture reacting to user input. Label the file YYYYMMDD Lastname Firstname Interactive Sculpture Video.mp4
 
-Label the file YYYYMMDD Lastname Firstname Interactive Sculpture Video.mp4
+2. Bring a version of the interactive sculpture to class for everyone to try.
 
 ## Overview
 
