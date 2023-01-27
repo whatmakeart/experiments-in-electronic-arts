@@ -20,7 +20,7 @@ The middle pin on the potentiometer goes to the Arduino pin used for input and t
 
 <figure>
 
-[![Analog Serial Circuit Example](analog-in-out-serial-from-arduino-docs.png)(analog-in-out-serial-from-arduino-docs.png)
+[![Analog Serial Circuit Example](analog-in-out-serial-from-arduino-docs.png)(analog-in-out-serial-from-arduino-docs.png)]
 
 <figcaption>
 
