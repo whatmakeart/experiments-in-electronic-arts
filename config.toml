@@ -51,6 +51,9 @@ disableHLJS = true
     noHl = false
     style = 'arduino'
     tabWidth = 4
+
+    [markup.goldmark.renderer]
+    unsafe= true
     
 
 
