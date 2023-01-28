@@ -280,9 +280,3 @@ There is an embedded video of an example of each artist's work. Each artist make
 </div>
 
 </div>
-
-### [Arvind Sanjeev](https://arvindsanjeev.com/)
-
-[twitter thread about Ghostwriter](https://twitter.com/ArvindSanjeev/status/1598303946585821185)
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I took apart my old typewriter and powered it using <a href="https://twitter.com/OpenAI?ref_src=twsrc%5Etfw">@OpenAI</a> GPT-3. <br><br>Meet: Ghostwriter, an <a href="https://twitter.com/hashtag/AI?src=hash&amp;ref_src=twsrc%5Etfw">#AI</a> creative writing companion that lets you co-write stories on paper with <a href="https://twitter.com/hashtag/ArtificialIntelligence?src=hash&amp;ref_src=twsrc%5Etfw">#ArtificialIntelligence</a> 👻 + 🤖. <a href="https://t.co/t8rP9AW51q">pic.twitter.com/t8rP9AW51q</a></p>&mdash; Arvind Sanjeev (@ArvindSanjeev) <a href="https://twitter.com/ArvindSanjeev/status/1598303946585821185?ref_src=twsrc%5Etfw">December 1, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
