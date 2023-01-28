@@ -1,10 +1,18 @@
 {{ define "main" }}
 
 
-<div id="home-jumbotron" class="jumbotron text-center">
-    <h1 class="title">{{ .Site.Title }}</h1>
-    <p class="font-125">by {{ .Site.Params.authorName | markdownify }}</p>
-</div>
+
+{{ range .Pages.ByTitle }}
+<p>
+<h3><a class="title-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+
+<a class="summary-link" href="{{ .RelPermalink }}">
+    {{ .Summary }}
+</a>
+</p>
+{{ end }}
+
+
 
 
 {{ end }}
