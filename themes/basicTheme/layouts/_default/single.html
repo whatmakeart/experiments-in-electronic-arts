@@ -1,8 +1,40 @@
 {{ define "main" }}
 
+<div class="container-fluid">
+    <div id="top-prev-next">
+
+        {{ if .NextPage }}
+        <a class="btn btn-sm btn-outline-dark"
+            href="{{ .NextPage.Permalink }}?ref=footer">« {{
+            .NextPage.Title | truncate 50 "..." }}</a>
+        {{ end }}
+
+        {{ if .PrevPage }}
+        <a class="btn btn-sm btn-outline-dark"
+            href="{{ .PrevPage.Permalink }}?ref=footer">{{
+            .PrevPage.Title | truncate 50 "..."}} »</a>
+        {{ end }}
+
+    </div>
+</div>
 
 {{ .Content }}
+<div class="container-fluid">
+    <div id="bottom-prev-next">
 
+        {{ if .NextPage }}
+        <a class="btn btn-lg btn-outline-dark"
+            href="{{ .NextPage.Permalink }}?ref=footer">« {{
+            .NextPage.Title | truncate 50 "..." }}</a>
+        {{ end }}
 
+        {{ if .PrevPage }}
+        <a class="btn btn-lg btn-outline-dark"
+            href="{{ .PrevPage.Permalink }}?ref=footer">{{
+            .PrevPage.Title | truncate 50 "..."}} »</a>
+        {{ end }}
+
+    </div>
+</div>
 
 {{ end }}
