@@ -91,7 +91,7 @@ There is an embedded video of an example of each artist's work. Each artist make
 
 <div class="video-card">
 
-[Adam Cole](https://linktr.ee/adamcole.studio)
+### [Adam Cole](https://linktr.ee/adamcole.studio)
 
 <div class="iframe-16-9-container">
 <iframe class="vimeoIframe" title="vimeo-player" src="https://player.vimeo.com/video/651633372?h=44bce0d592" width="640" height="360" frameborder="0" allowfullscreen></iframe>
