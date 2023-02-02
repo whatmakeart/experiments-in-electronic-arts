@@ -85,3 +85,187 @@ long microsecondsToCentimeters(long microseconds) {
   return microseconds / 29 / 2;
 }
 ```
+
+```C
+/*
+This is the code to make a LED blink with the music.
+You have to set the threshold so it' sensible enough to make the led blink.
+You connect an LED to PIN13 and the Sound Sensor to Analog Pin 0
+ */
+
+const int potPin = A0;  // pin for the potentiometer
+int potValue = 0;       // value of the potentiometer
+const int pingPin = 7;  // ping pin of the ultrasonic sensor
+
+const int trigPin = 7;
+const int echoPin = 8;
+const int micPin = A3;  // pin for the microphone
+const int ultraLED = 12;
+const int soundActivatedLEDs = 13;
+const int speakerPin = 11;
+
+long duration;
+int distance;
+
+
+const int sampleWindow = 50;             // milliseconds of microphone sample
+unsigned int sample;                     // sample value
+const long sampleSensorsInterval = 500;  // time between reading and printing Potentiometer value for testing
+const long ultraSonicInterval = 100;     // time between reading Ultrasonic Sensor
+const long clearTrigInterval = 2;        // time between reading Ultrasonic Sensor
+const long pulseTrigInterval = 10;       // time between reading Ultrasonic Sensor
+
+enum sensorStates { CLEAR_TRIG_PIN,
+                    PULSE_TRIG_PIN,
+                    READ_DISTANCE,
+                    TRIGGER_EVENT,
+                    WAIT_DELAY };
+enum sensorStates ultraSonicState = CLEAR_TRIG_PIN;
+
+unsigned long currentMilliseconds = 0;
+unsigned long currentMicroseconds = 0;
+unsigned long previousMillisecondsSampleSensors = 0;  // Time track for potentiometer
+unsigned long previousMillisecondsUltra = 0;          // Time track for Ultrasonic Sensor
+unsigned long previousMicrosecondsUltra = 0;          // Time track for Ultrasonic Sensor
+
+
+
+
+
+int threshold = 425;  //Change This
+int micVolume;
+
+void setup() {
+  Serial.begin(9600);  // For debugging
+  pinMode(soundActivatedLEDs, OUTPUT);
+  pinMode(trigPin, OUTPUT);  // Sets the trigPin as an Output
+  pinMode(echoPin, INPUT);   // Sets the echoPin as an Input
+  pinMode(ultraLED, OUTPUT);
+  pinMode(speakerPin, OUTPUT);
+}
+
+void loop() {
+  currentMilliseconds = millis();
+  currentMicroseconds = micros();
+  ultraSonic();
+  blueMicBlink();
+  printData();
+}
+
+void blueMicBlink() {
+  micVolume = analogRead(micPin);  // Reads the value from the Analog PIN A0
+  potValue = analogRead(potPin);
+  threshold = potValue / 1.2;
+  threshold = potValue;
+
+  // Serial.println(threshold);
+
+  if (potValue <= 100) {
+    turnOffLEDs();
+  }
+
+  else if (potValue >= 101) {
+
+    if (micVolume >= threshold) {
+      turnOnLEDs();
+    } else {
+      turnOffLEDs();
+    }
+  }
+}
+
+
+void readMicVoltRange() {
+  unsigned long startMillis = millis();
+  unsigned int peakToPeak = 0;
+  unsigned int signalMax = 0;
+  unsigned int signalMin = 1024;
+
+  while (millis() - startMillis < sampleWindow)
+    sample = analogRead(micPin);
+  if (sample < 1024) {
+    if (sample > signalMax) {
+      signalMax = sample;
+    } else if (sample < signalMin) {
+      signalMin = sample;
+    }
+  }
+  peakToPeak = signalMax - signalMin;
+  double volts = (peakToPeak * 5.0) / 1024;
+
+  //Serial.println(volts);
+}
+
+void printData() {
+  if (currentMilliseconds - previousMillisecondsSampleSensors >= sampleSensorsInterval) {
+    // save the last time you checked the potentiometer
+    previousMillisecondsSampleSensors = currentMilliseconds;
+    potValue = analogRead(potPin);
+    Serial.print("Potentiometer: ");
+    Serial.println(potValue);  // serial print the voltage output from the analog read of the potentiometer pin
+    // Prints the Ultrasonic distance on the Serial Monitor
+    Serial.print("Distance: ");
+    Serial.print(distance);
+    Serial.println(" centimeters");
+  }
+}
+
+void turnOffLEDs() {
+  digitalWrite(soundActivatedLEDs, LOW);  // Turn OFF Led
+}
+
+void turnOnLEDs() {
+  digitalWrite(soundActivatedLEDs, HIGH);  //Turn ON Led
+}
+
+void ultraSonic() {
+
+  switch (ultraSonicState) {
+    case CLEAR_TRIG_PIN:           // toggle the LED
+      digitalWrite(trigPin, LOW);  // Clears the trigPin
+      if (micros() - previousMicrosecondsUltra >= clearTrigInterval)
+        previousMicrosecondsUltra = micros();
+      ultraSonicState = PULSE_TRIG_PIN;
+      break;
+
+    case PULSE_TRIG_PIN:            // wait for the delay period
+      digitalWrite(trigPin, HIGH);  // Sets the trigPin on HIGH state for 10 micro seconds
+      if (millis() - previousMicrosecondsUltra >= pulseTrigInterval)
+        ultraSonicState = READ_DISTANCE;
+      break;
+
+    case READ_DISTANCE:                   // wait for the delay period
+      digitalWrite(trigPin, LOW);         // Clears the trigPin
+      duration = pulseIn(echoPin, HIGH);  // Reads the echoPin, returns the sound wave travel time in microseconds
+      distance = duration * 0.034 / 2;    // Calculating the distance
+      ultraSonicState = TRIGGER_EVENT;
+      break;
+
+    case TRIGGER_EVENT:  // do some cool thing
+      if (distance <= 400) {
+        digitalWrite(ultraLED, HIGH);
+
+        /*Tone needs 2 arguments, but can take three
+        1) Pin#
+        2) Frequency - this is in hertz (cycles per second) which determines the pitch of the noise made
+        3) Duration - how long teh tone plays
+        */
+        tone(speakerPin, 500, 100);
+      } else {
+        digitalWrite(ultraLED, LOW);
+      }
+      ultraSonicState = WAIT_DELAY;
+      break;
+
+    case WAIT_DELAY:  // wait for the delay period
+      if (millis() - previousMillisecondsUltra >= ultraSonicInterval) {
+        ultraSonicState = CLEAR_TRIG_PIN;
+      }
+      break;
+
+    default:
+      ultraSonicState = WAIT_DELAY;
+      break;
+  }
+}
+```
