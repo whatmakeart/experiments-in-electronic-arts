@@ -11,6 +11,7 @@ This example uses an electret condenser microphone module to control the blinkin
 ````C
 const int micPin = A0;  // pin for the microphone
 int micVolume;          // value of the microphone
+int micThreshold = 200; // mic threshold
 
 const int soundActivatedLEDs = 13; // pin for the LEDs
 
@@ -30,7 +31,7 @@ void loop() {
 void readMic() {
   micVolume = analogRead(micPin);  // Reads the value from the microphone
 
-    if (micVolume >= potValue) {
+    if (micVolume >= micThreshold) {
       digitalWrite(soundActivatedLEDs, HIGH);  // Turn ON Led
     } else {
       digitalWrite(soundActivatedLEDs, LOW);  // Turn OFF Led
