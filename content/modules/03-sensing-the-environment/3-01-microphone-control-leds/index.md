@@ -10,7 +10,7 @@ This example uses an electret condenser microphone module to control the blinkin
 
 You need a microphone module, a potentiometer, a LED, and a resistor for the LED. The potentiometer middle pin is hooked up to A0, the microphone is hooked up to A3 and the LED is hooked up to 12.
 
-[![Microphone Control LED with Arduino Circuit](microphone-control-led-jpg)](microphone-control-led-jpg)
+[![Microphone Control LED with Arduino Circuit](microphone-control-led.jpg)](microphone-control-led.jpg)
 
 ## Code to Blink LEDs Based on Mic Input
 
