@@ -6,6 +6,10 @@ draft: false
 
 This example uses an electret condenser microphone module to control the blinking of a LED. With the addition of an external power supply, this code could control a strip of LEDs for a large display.
 
+## Basic Mic Module Circuit Hook Up
+
+[![Basic Mic Module Circuit](basic-microphone-circuit.jpg)]basic-microphone-circuit.jpg)
+
 ## Basic Mic Code
 
 ```C
@@ -104,7 +108,7 @@ void readMic() {
 void printPot() {
   if (currentMilliseconds - previousMillisecondsPot >= samplePotInterval) {
     // save the last time you printed the potentiometer
-    previousMillisecondsPot = currentMilliseconds;
+    previousMillisecondsPot = currentMilliseconds; // set the previous check time to current time
     Serial.print("Potentiometer: ");
     Serial.println(potValue);  // serial print the voltage output from the analog read of the potentiometer pin
   }
