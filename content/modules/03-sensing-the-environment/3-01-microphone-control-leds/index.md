@@ -43,9 +43,15 @@ void readMic() {
 
 You need a microphone module, a potentiometer, a LED, and a resistor for the LED. The potentiometer middle pin is hooked up to A0, the microphone is hooked up to A3 and the LED is hooked up to 12.
 
+This code uses a potentiometer to turn off the LED when the potentiometer reads 100 or under. Then if it is above 100 it uses that level as the threshold to activate the LED. This allows the program to both be shut off and adjusted to different environments, loud and quiet.
+
+### Serial Monitor
+
+It also prints the value of the potentiometer from 0 - 1023 in the Serial Monitor of the Arduino IDE for testing the threshold. Go to Tools > Serial Monitor and match the 9600 speed and you will see the value of the potentiometer printed out every quarter second.
+
 [![Microphone Control LED with Arduino Circuit](microphone-control-led.jpg)](microphone-control-led.jpg)
 
-## Code to Blink LEDs Based on Mic Input
+## Code to Mic Threshold Controlled by Potentiometer
 
 ```C
 
@@ -62,7 +68,7 @@ int micVolume;          // value of the microphone
 
 const int soundActivatedLEDs = 13; // pin for the LEDs
 
-long samplePotInterval = 1000;
+long samplePotInterval = 250; // sample the potentiometer every 250 milliseconds or 1/4 second
 unsigned long currentMilliseconds = 0;      // current time in milliseconds
 unsigned long previousMillisecondsPot = 0;  // Time track for potentiometer
 
