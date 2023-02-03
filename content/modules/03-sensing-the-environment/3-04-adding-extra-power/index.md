@@ -1,5 +1,5 @@
 ---
-title: "3.0 - Add Extra Power to Arduino Project"
+title: "3.4 - Add Extra Power to Arduino Project"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---
@@ -20,6 +20,20 @@ A simple AC to DC wall power adapter is a quick and simple way to power external
 
 Most devices have power input ratings written on them or in a data sheet. It is important to calculate the needed power and match it with the power ratings of the external power supply used.
 
-![Image of Power Supply Input / Output Specs]()
+The power label below has the following specifications.
+
+<div class="responsive-table-markdown">
+
+| Specification  | Rating         |
+| -------------- | -------------- |
+| Input Voltage  | 100 - 240 V AC |
+| Input Cycles   | 50/60 hz       |
+| Input Current  | 1.2 A Max      |
+| Output Voltage | 12 V DC        |
+| Output Current | 3.0 A          |
+
+</div>
+
+![Image of Power Supply Input / Output Specs](ac-dc-power-adapter-label.jpg)
 
 [^1]: https://store-usa.arduino.cc/products/arduino-uno-rev3 [(Web Archive)](https://web.archive.org/web/20221227093254/https://store-usa.arduino.cc/products/arduino-uno-rev3)
