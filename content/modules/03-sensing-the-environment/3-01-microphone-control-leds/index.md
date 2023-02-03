@@ -62,6 +62,7 @@ int micVolume;          // value of the microphone
 
 const int soundActivatedLEDs = 13; // pin for the LEDs
 
+long samplePotInterval = 1000;
 unsigned long currentMilliseconds = 0;      // current time in milliseconds
 unsigned long previousMillisecondsPot = 0;  // Time track for potentiometer
 
@@ -81,7 +82,7 @@ void readMic() {
   potValue = analogRead(potPin);   // Reads the value from the potentiometer
 
   if (potValue <= 100) {           // if potentiometer is less than or equal to 100 turn off LEDs
-    turnOffLEDs();
+    digitalWrite(soundActivatedLEDs, LOW);  // Turn OFF Led
   }
 
   else if (potValue >= 101) {      // if greater than or equal to 101 then the mic controls the LEDs
@@ -102,5 +103,4 @@ void printPot() {
     Serial.println(potValue);  // serial print the voltage output from the analog read of the potentiometer pin
   }
 }
-
 ```
