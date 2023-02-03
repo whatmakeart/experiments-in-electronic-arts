@@ -68,17 +68,18 @@ This is the same ultrasonic sensor circuit with LED from the previous example wi
 This sketch adds a blinking LED that activates when the ultrasonic sensor reads a specified distance.
 
 ```C
-// ---------------------------------------------------------------------------
-// Example NewPing library sketch that does a ping about 20 times per second.
-// ---------------------------------------------------------------------------
+
 
 #include <NewPing.h>
 
-#define TRIGGER_PIN 12    // Arduino pin tied to trigger pin on the ultrasonic sensor.
-#define ECHO_PIN 11       // Arduino pin tied to echo pin on the ultrasonic sensor.
-#define MAX_DISTANCE 400  // Maximum distance we want to ping for (in centimeters). Maximum sensor distance is rated at 400-500cm.
+#define TRIGGER_PIN  12  // Arduino pin tied to trigger pin on ping sensor.
+#define ECHO_PIN     11  // Arduino pin tied to echo pin on ping sensor.
+#define MAX_DISTANCE 200 // Maximum distance we want to ping for (in centimeters). Maximum sensor distance is rated at 400-500cm.
 
-NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);  // NewPing setup of pins and maximum distance.
+NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); // NewPing setup of pins and maximum distance.
+
+unsigned int pingSpeed = 50; // How frequently are we going to send out a ping (in milliseconds). 50ms would be 20 times a second.
+unsigned long pingTimer;     // Holds the next ping time.
 
 // Added LED Blink Code
 const int ultraLEDPin = 13;  // pin of LED to turn on with Ultrasonic sensor
@@ -86,39 +87,41 @@ const int ultraLEDPin = 13;  // pin of LED to turn on with Ultrasonic sensor
 int distance;            // Distance calculated by ultrasonic sensor
 int reactDistance = 40;  // Distance the sensor reacts to in centimeters
 
-unsigned long currentMilliseconds = 0;
-unsigned long previousMillisecondsSampleSensors = 0;  // Time track for sensor reading
-unsigned long previousMillisecondsUltra = 0;          // Time track for Ultrasonic Sensor
-const long sampleSensorsInterval = 1000;              // time between printing sensor values
-const long ultraSonicInterval = 50;                   // Wait 50ms between pings (about 20 pings/sec). 29ms should be the shortest delay between ultrasonic pings.
-
 void setup() {
-  Serial.begin(115200);          // Open serial monitor at 115200 baud to see ping results.
-  pinMode(ultraLEDPin, OUTPUT);  // sets the ultraLEDpin as output
+  Serial.begin(115200); // Open serial monitor at 115200 baud to see ping results.
+  pingTimer = millis(); // Start now.
+   pinMode(ultraLEDPin, OUTPUT);  // sets the ultraLEDpin as output
 }
 
 void loop() {
-  currentMilliseconds = millis();  // set the current time in milliseconds
-
-  // This if statement runs every 50 ms or the ultraSonicInterval Value
-  if (currentMilliseconds - previousMillisecondsUltra >= ultraSonicInterval) {
-    distance = sonar.ping_cm();  // sets the distance variable to the distance in cm
+  // Notice how there's no delays in this sketch to allow you to do other processing in-line while doing distance pings.
+  if (millis() >= pingTimer) {   // pingSpeed milliseconds since last ping, do another ping.
+    pingTimer += pingSpeed;      // Set the next ping time.
+    sonar.ping_timer(echoCheck); // Send out the ping, calls "echoCheck" function every 24uS where you can check the ping status.
+  }
+  // Do other stuff here, really. Think of it as multi-tasking.
 
     if (distance <= reactDistance) {
-      digitalWrite(ultraLEDPin, HIGH);
-    } else {
-      digitalWrite(ultraLEDPin, LOW);
-    }
-  }
-
-  // This if statement prints to the serial monitor the value of sampleSensorsInterval in milliseconds
-
-  if (currentMilliseconds - previousMillisecondsSampleSensors >= sampleSensorsInterval) {
-    Serial.print("Ping: ");
-    Serial.print(distance);  // print the distance variable value
-    Serial.println("cm");
+    digitalWrite(ultraLEDPin, HIGH);
+  } else {
+    digitalWrite(ultraLEDPin, LOW);
   }
 }
+
+void echoCheck() { // Timer2 interrupt calls this function every 24uS where you can check the ping status.
+  // Don't do anything here!
+  if (sonar.check_timer()) { // This is how you check to see if the ping was received.
+    // Here's where you can add code.
+    Serial.print("Ping: ");
+    Serial.print(sonar.ping_result / US_ROUNDTRIP_CM); // Ping returned, uS result in ping_result, convert to cm with US_ROUNDTRIP_CM.
+    Serial.println("cm");
+
+    distance = sonar.ping_result / US_ROUNDTRIP_CM;  // sets the distance variable to the distance in cm
+  }
+  // Don't do anything here!
+}
+
+
 ```
 
 [^1]: https://bitbucket.org/teckel12/arduino-new-ping/wiki/Home
