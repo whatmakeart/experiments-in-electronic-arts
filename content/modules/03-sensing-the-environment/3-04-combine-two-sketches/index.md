@@ -4,66 +4,28 @@ date: 2020-01-26T23:11:13Z
 draft: false
 ---
 
-```C
-/*
-  Switch statement
+Now that we have multiple different sensors lets look at how we can combine two Arduino Sketches.
 
-  Demonstrates the use of a switch statement. The switch statement allows you
-  to choose from among a set of discrete values of a variable. It's like a
-  series of if statements.
+## 1 Copy all of the variables from before `setup();`
 
-  To see this sketch in action, put the board and sensor in a well-lit room,
-  open the Serial Monitor, and move your hand gradually down over the sensor.
+1. Copy all of the variables
+2. Rename any duplicates
+3. Reasign pins that are the same to different pins
+4. Make notes about variable renaming
+5. Make notes about pin reassignment
 
-  The circuit:
-  - photoresistor from analog in 0 to +5V
-  - 10K resistor from analog in 0 to ground
+## 2 Copy information from `setup();`
 
-  created 1 Jul 2009
-  modified 9 Apr 2012
-  by Tom Igoe
+1. Copy the new information
+2. Update any varaiable names from previous step
+3. Update any reassigned pins
 
-  This example code is in the public domain.
+## 3 Copy information from `loop();`
 
-  https://www.arduino.cc/en/Tutorial/BuiltInExamples/SwitchCase
-*/
+1. Copy the new information
+2. Update any varaiable names from previous step
+3. Update any reassigned pins
 
-// these constants won't change. They are the lowest and highest readings you
-// get from your sensor:
-const int sensorMin = 0;    // sensor minimum, discovered through experiment
-const int sensorMax = 600;  // sensor maximum, discovered through experiment
+## Test, Test, Test
 
-void setup() {
-  // initialize serial communication:
-  Serial.begin(9600);
-}
-
-void loop() {
-  // read the sensor:
-  int sensorReading = analogRead(A0);
-  // map the sensor range to a range of four options:
-  int range = map(sensorReading, sensorMin, sensorMax, 0, 3);
-
-  // do something different depending on the range value:
-  switch (range) {
-    case 0:  // your hand is on the sensor
-      Serial.println("dark");
-      break;
-    case 1:  // your hand is close to the sensor
-      Serial.println("dim");
-      break;
-    case 2:  // your hand is a few inches from the sensor
-      Serial.println("medium");
-      break;
-    case 3:  // your hand is nowhere near the sensor
-      Serial.println("bright");
-      break;
-  }
-  delay(1);  // delay in between reads for stability
-}
-
-```
-
-## State Machine Resources
-
-[State Machine Tutorial](http://www.thebox.myzen.co.uk/Tutorial/State_Machine.html)
+Then we must test the code to fix unexpected errors and problems.
