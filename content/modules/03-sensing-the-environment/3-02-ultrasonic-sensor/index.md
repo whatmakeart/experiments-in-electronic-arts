@@ -18,12 +18,13 @@ Hook up GND and 5V to the breadboard power rail and connect the same GND and 5V 
 
 /* Uses a state machine to read the ultrasonic sensor without delay */
 
-const int ultraLED = 10; // pin of LED
-const int trigPin = 11;  // trig pin of the ultrasonic sensor
-const int echoPin = 12;  // echo pin of the ultrasonic sensor
+const int ultraLEDPin = 13;  // pin of LED
+const int trigPin = 11;      // trig pin of the ultrasonic sensor
+const int echoPin = 12;      // echo pin of the ultrasonic sensor
 
-long duration; // duration of the pin
-int distance; // Distance calculated by ultrasonic sensor
+long duration;           // duration of the pin
+int distance;            // Distance calculated by ultrasonic sensor
+int reactDistance = 40;  // Distance the sensor reacts to in centimeters
 
 const long sampleSensorsInterval = 500;  // time between printing sensor values
 const long ultraSonicInterval = 100;     // time between reading Ultrasonic Sensor
@@ -37,7 +38,7 @@ enum sensorStates { CLEAR_TRIG_PIN,
                     TRIGGER_EVENT,
                     WAIT_DELAY };
 
-enum sensorStates ultraSonicState = CLEAR_TRIG_PIN; // sets the initial state to CLEAR_TRIG_PIN
+enum sensorStates ultraSonicState = CLEAR_TRIG_PIN;  // sets the initial state to CLEAR_TRIG_PIN
 
 unsigned long currentMilliseconds = 0;
 unsigned long currentMicroseconds = 0;
@@ -46,9 +47,10 @@ unsigned long previousMillisecondsUltra = 0;          // Time track for Ultrason
 unsigned long previousMicrosecondsUltra = 0;          // Time track for Ultrasonic Sensor
 
 void setup() {
-  Serial.begin(9600);  // start serial monitor
-  pinMode(trigPin, OUTPUT);  // Sets the trigPin as an Output
-  pinMode(echoPin, INPUT);   // Sets the echoPin as an Input
+  Serial.begin(9600);            // start serial monitor
+  pinMode(trigPin, OUTPUT);      // Sets the trigPin as an Output
+  pinMode(echoPin, INPUT);       // Sets the echoPin as an Input
+  pinMode(ultraLEDPin, OUTPUT);  // Sets the ultraLEDPin as an Input
 }
 
 void loop() {
@@ -69,6 +71,7 @@ void printData() {
   }
 }
 void ultraSonic() {
+
   switch (ultraSonicState) {
     case CLEAR_TRIG_PIN:           // toggle the LED
       digitalWrite(trigPin, LOW);  // Clears the trigPin
@@ -90,16 +93,17 @@ void ultraSonic() {
       ultraSonicState = TRIGGER_EVENT;
       break;
 
-    case TRIGGER_EVENT:                   // do some cool thing
-      if (distance <= 400) {
-        digitalWrite(ultraLED, HIGH);     // Turns on the LED
+    case TRIGGER_EVENT:  // do some cool thing
+      if (distance <= reactDistance) {
+        digitalWrite(ultraLEDPin, HIGH);  // Turns on the LED
+
       } else {
-        digitalWrite(ultraLED, LOW);      // Turns off the LED
+        digitalWrite(ultraLEDPin, LOW);  // Turns off the LED
       }
       ultraSonicState = WAIT_DELAY;
       break;
 
-    case WAIT_DELAY:                      // wait for the delay period
+    case WAIT_DELAY:  // wait for the delay period
       if (millis() - previousMillisecondsUltra >= ultraSonicInterval) {
         ultraSonicState = CLEAR_TRIG_PIN;
       }
@@ -110,51 +114,5 @@ void ultraSonic() {
       break;
   }
 }
+
 ```
-
-## Install the NewPing library by Tim Eckel [^1]
-
-The NewPing library makes using the ultrasonic sensor super simple. All of the timing and reading of the sensor is contained in the library. This keeps the main sketch code simpler and easier to read.
-
-<div class="two-column-instructions-grid">
-
-- Click on the library icon
-- Type newping into the search bar
-- Install the NewPing library by Tim Eckel
-
-[![Install NewPing Library](newping-library-install.jpg)](newping-library-install.jpg)
-
-</div>
-
-### Example Sketch from NewPing Documentation
-
-```C
-// ---------------------------------------------------------------------------
-// Example NewPing library sketch that does a ping about 20 times per second.
-// ---------------------------------------------------------------------------
-
-#include <NewPing.h>
-
-#define TRIGGER_PIN  12  // Arduino pin tied to trigger pin on the ultrasonic sensor.
-#define ECHO_PIN     11  // Arduino pin tied to echo pin on the ultrasonic sensor.
-#define MAX_DISTANCE 200 // Maximum distance we want to ping for (in centimeters). Maximum sensor distance is rated at 400-500cm.
-
-NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); // NewPing setup of pins and maximum distance.
-
-void setup() {
-  Serial.begin(115200); // Open serial monitor at 115200 baud to see ping results.
-}
-
-void loop() {
-  delay(50);                     // Wait 50ms between pings (about 20 pings/sec). 29ms should be the shortest delay between pings.
-  Serial.print("Ping: ");
-  Serial.print(sonar.ping_cm()); // Send ping, get distance in cm and print result (0 = outside set distance range)
-  Serial.println("cm");
-}
-```
-
-### Basic Ultrasonic Sensor Circuit for Testing NewPing Library
-
-[![Ultrasonic Sensor Circuit](ultrasonic-sensor-circuit.png)](ultrasonic-sensor-circuit.png)
-
-[^1]: https://bitbucket.org/teckel12/arduino-new-ping/wiki/Home
