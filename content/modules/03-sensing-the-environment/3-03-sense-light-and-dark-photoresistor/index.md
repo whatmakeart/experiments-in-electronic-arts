@@ -1,5 +1,5 @@
 ---
-title: "3.04 Sense Light and Dark with Photoresistor"
+title: "3.03 Sense Light and Dark with Photoresistor"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---

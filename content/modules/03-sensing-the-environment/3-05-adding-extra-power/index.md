@@ -1,5 +1,5 @@
 ---
-title: "3.06 - Add Extra Power to Arduino Project"
+title: "3.05 - Add Extra Power to Arduino Project"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---
