@@ -8,7 +8,7 @@ This example uses an electret condenser microphone module to control the blinkin
 
 ## Basic Mic Code
 
-````C
+```C
 const int micPin = A0;  // pin for the microphone
 int micVolume;          // value of the microphone
 int micThreshold = 200; // mic threshold
@@ -38,8 +38,6 @@ void readMic() {
     }
 }
 ```
-
-
 
 ## Circuit Setup
 
@@ -105,4 +103,4 @@ void printPot() {
   }
 }
 
-````
+```
