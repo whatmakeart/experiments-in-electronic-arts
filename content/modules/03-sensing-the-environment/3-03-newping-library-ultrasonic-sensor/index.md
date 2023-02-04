@@ -65,7 +65,7 @@ This is the same ultrasonic sensor circuit with LED from the previous example wi
 
 [![Ultrasonic Sensor Circuit with LED ](ultrasonic-sensor-circuit-with-led.png)](ultrasonic-sensor-circuit-with-led.png)
 
-### NewPing Example Sketch from the Documentation with Added LED
+### NewPing Example Sketch with Added LED without `delay();`
 
 This sketch adds a blinking LED that activates when the ultrasonic sensor reads a specified distance. In the documentation for this NewPing without `delay();` example sketch, Tim Ekel notes that the sketch uses the Arduino Timer2. This has some limitations with using other functions that use Timer2 such as PWM on certain pin and the tone library. Read the [NewPing documentation](https://bitbucket.org/teckel12/arduino-new-ping/wiki/Home) for more information. [^2]
 
