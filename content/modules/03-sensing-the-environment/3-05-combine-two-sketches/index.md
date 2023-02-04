@@ -10,6 +10,8 @@ draft: false
 - Photo of the electronics hooked up on the breadboard of the combined sketches
 - 5-10 second video of everything working or if code doesn't compile a video of it not working
 
+Do your best. It may not work and there may be errors that you cannot fix. That is ok but give it valid attempt.
+
 ## Assignment Overview
 
 Now that we have multiple different sensors lets look at how we can combine two Arduino Sketches.
