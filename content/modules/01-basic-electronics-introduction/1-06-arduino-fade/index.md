@@ -87,3 +87,47 @@ void loop() {
 
 
 ```
+
+### Arduino Fade LED without `delay();`
+
+The example below fades the LED without using the `delay();` function that blocks code.
+
+```C
+
+unsigned long currentMilliseconds = 0;          // variable for current time in milliseconds
+unsigned long previousMillisecondsFadeLed = 0;  // previous time in milliseconds
+int fadeInterval = 30;                          // milliseconds for the LED fade
+
+int led = 9;         // the PWM pin the LED is attached to
+int brightness = 0;  // how bright the LED is
+int fadeAmount = 5;  // how many points to fade the LED by
+
+// the setup routine runs once when you press reset:
+void setup() {
+  // declare pin 9 to be an output:
+  pinMode(led, OUTPUT);
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+  // set the brightness of pin 9:
+  analogWrite(led, brightness);
+
+  unsigned long currentMilliseconds = millis();  // set the current time to the current milliseconds
+
+  // check if the fadeInterval time has passed since the previous time
+  if (currentMilliseconds - previousMillisecondsFadeLed >= fadeInterval) {
+    // save the last time you changed LED brightness
+    previousMillisecondsFadeLed = currentMilliseconds;
+
+    // change the brightness for next time through the loop:
+    brightness = brightness + fadeAmount;
+
+    // reverse the direction of the fading at the ends of the fade:
+    if (brightness <= 0 || brightness >= 255) {
+      fadeAmount = -fadeAmount;
+    }
+  }
+}
+
+```
