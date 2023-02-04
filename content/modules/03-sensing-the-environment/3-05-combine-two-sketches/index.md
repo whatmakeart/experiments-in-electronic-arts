@@ -8,12 +8,12 @@ Now that we have multiple different sensors lets look at how we can combine two 
 
 Pick two of the example sketches we worked with so far in the course. It is bet to use examples that don't use the delay function.
 
-- Blink without delay
-- Fade LED
-- Denounce button turn on LED
-- Servo knob without delay
-- microphone control LED
-- Ultrasonic Sensor
+- Arduino Fade
+- Arduino Blink Without Delay
+- Arduino Button Debounce
+- Servo Knob Without Delay
+- Microphone control LED
+- Ultrasonic Sensor NewPing Library
 
 Follow the guide for combining Arduino Sketches
 
