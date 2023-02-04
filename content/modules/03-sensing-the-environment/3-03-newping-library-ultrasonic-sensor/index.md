@@ -71,7 +71,6 @@ This sketch adds a blinking LED that activates when the ultrasonic sensor reads 
 
 ```C
 
-
 #include <NewPing.h>
 
 #define TRIGGER_PIN  12  // Arduino pin tied to trigger pin on ping sensor.
@@ -85,7 +84,6 @@ unsigned long pingTimer;     // Holds the next ping time.
 
 // Added LED Blink Code
 const int ultraLEDPin = 13;  // pin of LED to turn on with Ultrasonic sensor
-
 int distance;            // Distance calculated by ultrasonic sensor
 int reactDistance = 40;  // Distance the sensor reacts to in centimeters
 // End added LED Blink Code
@@ -102,14 +100,15 @@ void loop() {
     pingTimer += pingSpeed;      // Set the next ping time.
     sonar.ping_timer(echoCheck); // Send out the ping, calls "echoCheck" function every 24uS where you can check the ping status.
   }
-    if (distance <= reactDistance) { // check if distance is less than reactDistance
+  if (distance <= reactDistance) { // check if distance is less than reactDistance
     digitalWrite(ultraLEDPin, HIGH); // turn on the LED pin
   } else {
     digitalWrite(ultraLEDPin, LOW);  // if distance is farther turn off LED pin
   }
 } // end of loop()
 
-void echoCheck() { // Timer2 interrupt calls this function every 24uS where you can check the ping status.
+void echoCheck() {
+  // Timer2 interrupt calls this function every 24uS where you can check the ping status.
   // Don't do anything here!
   if (sonar.check_timer()) { // This is how you check to see if the ping was received.
     // Here's where you can add code.
