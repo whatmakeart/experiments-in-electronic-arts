@@ -32,6 +32,8 @@ This sketch starts the serial monitor and prints the distance from the sensor. T
 
 NOTE: If you do not see anything when you turn the serial monitor on make sure you set the speed in the serial monitor to 115200.
 
+NOTE: This basic example sketch uses `delay(30);` in the code, so it is blocking code and would not work with other sketches unless modified. The 2nd example below with an LED uses the libraries supplied timer example without `delay();`.
+
 ```C
 // ---------------------------------------------------------------------------
 // Example NewPing library sketch that does a ping about 20 times per second.
@@ -65,7 +67,7 @@ This is the same ultrasonic sensor circuit with LED from the previous example wi
 
 ### NewPing Example Sketch from the Documentation with Added LED
 
-This sketch adds a blinking LED that activates when the ultrasonic sensor reads a specified distance.
+This sketch adds a blinking LED that activates when the ultrasonic sensor reads a specified distance. In the documentation for this NewPing without `delay();` example sketch, Tim Ekel notes that the sketch uses the Arduino Timer2. This has some limitations with using other functions that use Timer2 such as PWM on certain pin and the tone library. Read the [NewPing documentation](https://bitbucket.org/teckel12/arduino-new-ping/wiki/Home) for more information. [^2]
 
 ```C
 
@@ -86,27 +88,26 @@ const int ultraLEDPin = 13;  // pin of LED to turn on with Ultrasonic sensor
 
 int distance;            // Distance calculated by ultrasonic sensor
 int reactDistance = 40;  // Distance the sensor reacts to in centimeters
+// End added LED Blink Code
 
 void setup() {
   Serial.begin(115200); // Open serial monitor at 115200 baud to see ping results.
   pingTimer = millis(); // Start now.
-   pinMode(ultraLEDPin, OUTPUT);  // sets the ultraLEDpin as output
-}
+  pinMode(ultraLEDPin, OUTPUT);  // sets the ultraLEDpin as output
+} // end of setup()
 
 void loop() {
-  // Notice how there's no delays in this sketch to allow you to do other processing in-line while doing distance pings.
+
   if (millis() >= pingTimer) {   // pingSpeed milliseconds since last ping, do another ping.
     pingTimer += pingSpeed;      // Set the next ping time.
     sonar.ping_timer(echoCheck); // Send out the ping, calls "echoCheck" function every 24uS where you can check the ping status.
   }
-  // Do other stuff here, really. Think of it as multi-tasking.
-
-    if (distance <= reactDistance) {
-    digitalWrite(ultraLEDPin, HIGH);
+    if (distance <= reactDistance) { // check if distance is less than reactDistance
+    digitalWrite(ultraLEDPin, HIGH); // turn on the LED pin
   } else {
-    digitalWrite(ultraLEDPin, LOW);
+    digitalWrite(ultraLEDPin, LOW);  // if distance is farther turn off LED pin
   }
-}
+} // end of loop()
 
 void echoCheck() { // Timer2 interrupt calls this function every 24uS where you can check the ping status.
   // Don't do anything here!
@@ -119,9 +120,10 @@ void echoCheck() { // Timer2 interrupt calls this function every 24uS where you 
     distance = sonar.ping_result / US_ROUNDTRIP_CM;  // sets the distance variable to the distance in cm
   }
   // Don't do anything here!
-}
+} // end of echoCheck()
 
 
 ```
 
 [^1]: https://bitbucket.org/teckel12/arduino-new-ping/wiki/Home
+[^2]: https://bitbucket.org/teckel12/arduino-new-ping/wiki/Home#!event-timer-sketch

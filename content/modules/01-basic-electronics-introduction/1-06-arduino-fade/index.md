@@ -85,7 +85,6 @@ void loop() {
   delay(30);
 }
 
-
 ```
 
 ### Arduino Fade LED without `delay();`
