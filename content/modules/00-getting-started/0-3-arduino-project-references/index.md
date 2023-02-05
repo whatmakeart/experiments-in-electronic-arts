@@ -7,6 +7,9 @@ draft: false
 ## Arduino Code
 
 - [Official Arduino Code Reference](https://www.arduino.cc/reference/en/)
+- [How to Combine Arduino Sketches](https://youtu.be/nepj56gusuk)
+- [How to Remove Delay from Arduino Sketch](https://youtu.be/EdpFZ8iCXo4)
+- [How to Put Code into a Function](https://youtu.be/eBAeqSWm_hw)
 
 ## From Arduino Forum Posts
 
