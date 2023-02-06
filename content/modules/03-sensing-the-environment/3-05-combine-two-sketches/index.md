@@ -6,7 +6,7 @@ draft: false
 
 ## Assignment Deliverables
 
-- Arduino .ino file. This is the saved sketch file from the Arduino IDE.
+- Arduino .ino file. This is the saved sketch file from the Arduino IDE of the combined sketches.
 - Photo of the electronics hooked up on the breadboard of the combined sketches
 - 5-10 second video of everything working or if code doesn't compile a video of it not working
 
