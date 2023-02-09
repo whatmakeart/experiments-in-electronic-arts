@@ -1,3 +1,9 @@
+---
+title: "4.10 Arduino Long Distance Communication"
+date: 2020-01-26T23:11:13Z
+draft: false
+---
+
 ## Long Wires
 
 ### RS422 or RS485

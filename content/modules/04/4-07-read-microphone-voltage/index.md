@@ -1,3 +1,9 @@
+---
+title: "4-07-read-microphone-voltage"
+date: 2020-01-26T23:11:13Z
+draft: false
+---
+
 ```C
 /* Read Microphone Voltage */
 const int sampleWindow = 50;         // milliseconds of microphone sample
