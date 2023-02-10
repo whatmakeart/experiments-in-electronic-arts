@@ -1,5 +1,5 @@
 ---
-title: "4.03 Electronics Soldering Basics"
+title: "4.04 Electronics Soldering Basics"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---
@@ -57,6 +57,7 @@ Use lead-free solder unless your specific application won't allow it. Lead vapor
 
 - [Case Western think[box] Soldering Guide](https://docs.google.com/document/d/1tkXUWJgCA8Q4fddSWkPbCKCXfLxbsZ7JyyeDv9Ac5PQ/view)
 - [Arduino Guide to Soldering](https://docs.arduino.cc/learn/electronics/soldering-basics)
+- [Circuit Technology Center Soldering Basics](https://www.circuitrework.com/guides/7-1-1.html) [(Web Archive)](https://web.archive.org/web/20230111095549/https://www.circuitrework.com/guides/7-1-1.html)
 - [Wikipedia Soldering Article](https://en.wikipedia.org/wiki/Soldering)
 
 [^1]: https://learn.adafruit.com/assets/1978

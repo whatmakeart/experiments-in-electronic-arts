@@ -1,5 +1,5 @@
 ---
-title: "4.04 How to Use a Multimeter"
+title: "4.07 How to Use a Multimeter"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---
