@@ -23,3 +23,8 @@ The Arduino forums are a great place to ask questions about projects and to sear
 ## Electronics Tools
 
 - [Voltage Drop Calculator](https://www.calculator.net/voltage-drop-calculator.html)
+
+## Project Examples
+
+- [Pulse Heart Sensor Headband](https://pulsesensor.com/blogs/news/6327710-heartbeat-headband-dyi-video)
+- [Pulse Heart Sensor Headband Article on Makezine](https://makezine.com/projects/beating-heart-headband/)

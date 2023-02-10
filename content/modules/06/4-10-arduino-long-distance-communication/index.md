@@ -1,5 +1,5 @@
 ---
-title: "4.10 Arduino Long Distance Communication"
+title: "6.10 Arduino Long Distance Communication"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---
