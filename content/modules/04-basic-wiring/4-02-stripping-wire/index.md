@@ -17,3 +17,5 @@ Unless it's an emergency, do not use cheap wire strippers like this, they are no
 Wire strippers come in different sizes for different ranges of wire. Make sure you use the specific stripper for the size wire that you have. This style. Stripper works quite well for stripping wire. This style stripper clamps the wire and can be used for repeatable actions of wire stripped at a particular depth.
 
 It's generally easier to trim the wire to the proper length before stripping, especially with stranded wire. It can take some practice to make sure that you remove the proper amount of insulation.
+
+[![Wire Strippers](2023-wire-strippers.jpg)](2023-wire-strippers.jpg)
