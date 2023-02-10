@@ -5,13 +5,13 @@
 
         {{ if .NextPage }}
         <a class="btn btn-sm btn-outline-dark"
-            href="{{ .NextPage.Permalink }}?ref=footer">« {{
+            href="{{ .NextPage.Permalink }}">« {{
             .NextPage.Title | truncate 50 "..." }}</a>
         {{ end }}
 
         {{ if .PrevPage }}
         <a class="btn btn-sm btn-outline-dark"
-            href="{{ .PrevPage.Permalink }}?ref=footer">{{
+            href="{{ .PrevPage.Permalink }}">{{
             .PrevPage.Title | truncate 50 "..."}} »</a>
         {{ end }}
 
@@ -24,13 +24,13 @@
 
         {{ if .NextPage }}
         <a class="btn btn-lg btn-outline-dark"
-            href="{{ .NextPage.Permalink }}?ref=footer">« {{
+            href="{{ .NextPage.Permalink }}">« {{
             .NextPage.Title | truncate 50 "..." }}</a>
         {{ end }}
 
         {{ if .PrevPage }}
         <a class="btn btn-lg btn-outline-dark"
-            href="{{ .PrevPage.Permalink }}?ref=footer">{{
+            href="{{ .PrevPage.Permalink }}">{{
             .PrevPage.Title | truncate 50 "..."}} »</a>
         {{ end }}
 

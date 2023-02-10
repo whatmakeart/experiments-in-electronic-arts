@@ -8,14 +8,14 @@
 
     <div class="container-fluid justify-content-center">
         <main class="row" id="main">
-            <div class="col">
+            <div class="col main-content">
                 {{ block "main" . }}{{ end }}
             </div>
         </main>
     </div>
+
     {{ partial "footer.html" . }}
     {{ partial "script.html" . }}
-
 
 </body>
 

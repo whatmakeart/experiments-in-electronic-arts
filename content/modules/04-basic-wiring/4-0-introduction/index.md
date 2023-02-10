@@ -6,6 +6,8 @@ draft: false
 
 ## Overview
 
+This module introduces more permanent wiring connections than using a solderless breadboard. Once a project moves past the initial testing or proof of concept phase, more predictable and reliable wire connections are needed. This can be done by choosing the rights size and type of wire and the the proper type of connection. Wires can be soldered to components or they can be crimped to terminals and connectors. Wire stripping, wire crimping, and soldering are introduced.
+
 ## Learning Objectives
 
 - attach through hole components to a perfboard

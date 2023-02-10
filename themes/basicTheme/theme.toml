@@ -2,8 +2,8 @@
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
 name = "BasicTheme"
-license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+license = ""
+licenselink = ""
 description = ""
 homepage = ""
 tags = []

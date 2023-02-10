@@ -1,5 +1,5 @@
 ---
-title: "1.4 - LEDs Light Emitting Diodes"
+title: "1.04 - LEDs Light Emitting Diodes"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---

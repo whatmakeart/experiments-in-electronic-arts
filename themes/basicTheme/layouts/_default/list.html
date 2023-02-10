@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-
+<!--
 {{ range .Pages.ByTitle }}
 <p>
 <h3><a class="title-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
@@ -12,4 +12,17 @@
 {{ end }}
 
 
+{{ end }}
+-->
+
+<!-- Groups content according to content section. The ".Key" in this instance will be the section's title. -->
+{{ range .Pages.GroupBy "Section" }}
+<h3>{{ .Key }}</h3>
+<ul>
+    {{ range .Pages.ByTitle }}
+    <li>
+        <a class="title-link" href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+</ul>
 {{ end }}

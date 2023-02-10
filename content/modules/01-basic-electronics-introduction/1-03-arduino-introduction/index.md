@@ -1,5 +1,5 @@
 ---
-title: "1.3 - Arduino Introduction"
+title: "1.03 - Arduino Introduction"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---

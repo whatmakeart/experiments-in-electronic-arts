@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+:root {
+  --text-max-width: 700px;
+  --page-max-width: 1366px;
+}
+
 html {
   font-family: Lato, Helvetica, Arial, sans-serif; /* match Canvas LMS Fonts */
   text-rendering: optimizelegibility;
@@ -39,19 +44,39 @@ h6 {
 }
 
 .container-fluid {
-  max-width: 1366px;
+  max-width: var(--page-max-width);
   min-width: 301px;
 }
+
+.main-content > h1,
+.main-content > h2,
+.main-content > h3,
+.main-content > h4,
+.main-content > h5,
+.main-content > h6,
+.main-content > p,
+.main-content > ul,
+.main-content > ol,
+.main-content > dl,
+.main-content > dd,
+#pageTitleH1,
+a.summary-link,
+.footnotes,
+#text {
+  max-width: var(--text-max-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .responsive-table-markdown {
   display: block;
   width: 100%;
   overflow-x: auto;
   margin: 0 auto;
-  max-width: 1000px;
 }
 
 .responsive-table-markdown > table {
-  width: 100%;
+  overflow-x: auto;
 }
 
 img {
@@ -65,13 +90,25 @@ a {
 
 .two-column-instructions-grid {
   display: grid;
-  grid-template-columns: 50% 50%;
-  align-items: center;
-  grid-gap: 0px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0;
+  justify-items: center;
+  margin: 0 auto;
+  padding: 0;
+  border-right: 1px solid #5b5b5b;
+  border-bottom: 1px solid #5b5b5b;
 }
 
 .two-column-instructions-grid > * {
-  border-top: 1px solid red;
+  border-top: 1px solid #5b5b5b;
+  border-left: 1px solid #5b5b5b;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+.two-column-instructions-grid > ul {
+  padding-left: 2rem;
 }
 
 .two-column-grid {
@@ -79,6 +116,11 @@ a {
   grid-template-columns: 1fr;
   align-items: center;
   grid-gap: 0px;
+  padding-bottom: 1rem;
+}
+
+.text-card {
+  align-self: start;
 }
 
 .tutorial-video-grid,
@@ -142,34 +184,17 @@ a.title-link {
   justify-content: stretch;
 }
 
-.fit-img-jimmy {
+.fit-img {
   object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.image-box-jimmy {
+.image-box {
   position: relative;
   width: 300px;
   height: 300px;
-}
-
-.flex-container-jimmy {
-  display: flex;
-  align-items: top;
-  flex-wrap: wrap;
-}
-
-.half-box {
-  flex: 1 1 400px;
-}
-.half-box p {
-  margin-right: 1rem;
-}
-
-.caption-jimmy {
-  font-size: 14px;
 }
 
 /* site title on pages below nav menu */
@@ -183,15 +208,32 @@ a.title-link {
   grid-template-columns: 1fr;
   grid-gap: 1rem;
   padding: 1rem 0 1rem 0;
+  max-width: var(--text-max-width);
+  margin: 0 auto;
 }
 
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
+/* For over text width size */
 
+@media only screen and (min-width: 700px) {
+  .responsive-table-markdown > table {
+    max-width: var(--page-max-width);
+    min-width: var(--text-max-width);
+    margin: 0 auto;
+  }
+
+  .two-column-instructions-grid {
+    max-width: var(--page-max-width);
+  }
+}
+/* For desktop and larger screens */
+@media only screen and (min-width: 1000px) {
   .two-column-grid {
-    grid-template-columns: 50% 50%;
-
+    grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
+  }
+
+  .two-column-grid > p {
+    margin-bottom: 0; /* to keep youTube videos and images vertically aligned since hugo wraps the images in p tags */
   }
 
   #top-prev-next,
@@ -211,6 +253,11 @@ pre {
 }
 
 .highlight-wrapper {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  overflow-x: scroll;
   display: block;
 }
 
@@ -255,41 +302,48 @@ pre {
   margin: 0;
 }
 
-.copy-code-button {
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  top: 0;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 14px;
-  width: 65px;
-  color: #232326;
-  background-color: #7f7f7f;
-  border: 1.25px solid #232326;
-  border-top-left-radius: 0;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 4px;
-  white-space: nowrap;
-  padding: 4px 4px 5px 4px;
-  margin: 0 0 0 1px;
-  cursor: pointer;
-  opacity: 0.6;
-}
-
-.copy-code-button:hover,
-.copy-code-button:focus,
-.copy-code-button:active,
-.copy-code-button:active:hover {
-  color: #222225;
-  background-color: #b3b3b3;
-  opacity: 0.8;
-}
-
 .copyable-text-area {
   position: absolute;
   height: 0;
   z-index: -1;
   opacity: 0.01;
+}
+
+.copy-code-button {
+  color: #272822;
+  background-color: #fff;
+  border-color: #272822;
+  border: 2px solid;
+  border-radius: 3px 3px 0px 0px;
+  min-width: 6rem;
+  /* right-align */
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+
+  margin-bottom: -2px;
+  padding: 3px 8px;
+  font-size: 0.8em;
+}
+
+.copy-code-button:hover {
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+.copy-code-button:focus {
+  /* Avoid an ugly focus outline on click in Chrome,
+     but darken the button for accessibility.
+     See https://stackoverflow.com/a/25298082/1481479 */
+  background-color: #e6e6e6;
+  outline: 0;
+}
+
+.copy-code-button:active {
+  background-color: #d9d9d9;
+}
+
+.highlight pre {
+  /* Avoid pushing up the copy buttons. */
+  margin: 0;
 }
