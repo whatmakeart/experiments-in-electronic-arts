@@ -22,6 +22,8 @@ Spade terminals, ring terminals, and fork terminals are the most common crimp te
 
 </div>
 
+## Crimp Terminal for Smaller Wires
+
 ### Header Pin .1" Pitch Connectors
 
 Commonly but usually incorrectly referred to as Dupont connectors, these small connectors are found on jumper wires and fit into the header pins of many electronics modules. [^6]
@@ -33,15 +35,21 @@ Commonly but usually incorrectly referred to as Dupont connectors, these small c
 - SM Connectors aer used to connect wires to wires. These are found in Adafruit's NewPixel LED strips. [^2]
 - RCY connectors are used to connect wires to wires and have a locking device. They have a 2.5mm pitch. [^3]
 
+### JST Connector Resources
+
 [JST Connectors Wikipedia](https://en.wikipedia.org/wiki/JST_connector)
 
 [JST's Precautions for Crimping Process Instructions](https://www.jst-mfg.com/precaution/eP-Crimp.pdf) [(Archive)](eP-Crimp.pdf)
 
+[JST Good Crimping Guide](https://www.jst-services.co.uk/docs/good%20crimping.pdf) [(Archive)](JST-good-crimping.pdf)
+
+[JST Connector Types Mat Millman](https://www.mattmillman.com/info/crimpconnectors/common-jst-connector-types/)
+
+## Crimping Resources
+
 [Hatko Crimping Guidelines](https://www.hatko.com/uploads/files/files/KRiMP-PANO/Crimping-guidelines.pdf) [(Archive)](Hatko-crimping-guidelines.pdf)
 
 [Mouser Crimping Catalog Article from TE Connectivity](https://www.mouser.com/catalog/additional/TE_Where%20Form%20Meets%20Function%205-1773452-5.pdf) [(Archive)](TE_Where Form Meets Function 5-1773452-5.pdf)
-
-[JST Good Crimping Guide](https://www.jst-services.co.uk/docs/good%20crimping.pdf) [(Archive)](JST-good-crimping.pdf)
 
 [Bradley Gawthrop's Wiring Bootcamp](https://youtu.be/FMXdXCYvLQQ)
 
