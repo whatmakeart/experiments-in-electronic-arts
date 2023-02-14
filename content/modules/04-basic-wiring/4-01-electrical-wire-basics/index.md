@@ -12,7 +12,7 @@ In the AWG system a smaller number indicates a bigger wire, so a #1 wire is much
 
 ### Wire Gauge Table [^1]
 
-<div class="responsiv-tablep-markdown">
+<div class="responsive-table-markdown">
 
 | AWG | Diameter mils | Ohms per 1000 ft. |
 | --- | ------------- | ----------------- |
