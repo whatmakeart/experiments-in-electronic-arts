@@ -58,28 +58,28 @@ Unlike the other measurements that use both probes to touch the positive and neg
 
 <div class="responsive-table-markdown">
 
-| Multimeter Symbol | Meaning                         |
-| ----------------- | ------------------------------- |
-| ⎓                 | Direct Current                  |
-| 〜                | Alternating Current             |
-| V〜 or Ṽ          | Voltage AC                      |
-| VAC               | Voltage AC                      |
-| Ω                 | Resistance                      |
-| A〜 or Ã          | AC Current                      |
-| A⎓                | DC Current                      |
-| A≂                | AC / DC Current                 |
-| ⇥                 | Diode                           |
-| )))               | Continuity                      |
-| µ                 | micro                           |
-| ㏀                | kiloohm (1,000 ohms Ω)          |
-| ㏁                | megaohm (1,000,000 ohms Ω)      |
-| µΩ                | micro-ohm (0.000001 ohms Ω)     |
-| F                 | Farad                           |
-| mF                | millifarad (0.001 Farads)       |
-| µF                | micro-farad (0.000001 Farads)   |
-| A                 | ampere                          |
-| ㎄                | kiloampere (1,000 amperes)      |
-| ㎃                | milliampere (0.001 amperes)     |
-| μA                | microampere (0.000001 amperes ) |
+| **Multimeter Symbol** | **Meaning**                     |
+| --------------------- | ------------------------------- |
+| ⎓                     | Direct Current                  |
+| 〜                    | Alternating Current             |
+| V〜 or Ṽ              | Voltage AC                      |
+| VAC                   | Voltage AC                      |
+| Ω                     | Resistance                      |
+| A〜 or Ã              | AC Current                      |
+| A⎓                    | DC Current                      |
+| A≂                    | AC / DC Current                 |
+| ⇥                     | Diode                           |
+| )))                   | Continuity                      |
+| µ                     | micro                           |
+| ㏀                    | kiloohm (1,000 ohms Ω)          |
+| ㏁                    | megaohm (1,000,000 ohms Ω)      |
+| µΩ                    | micro-ohm (0.000001 ohms Ω)     |
+| F                     | Farad                           |
+| mF                    | millifarad (0.001 Farads)       |
+| µF                    | micro-farad (0.000001 Farads)   |
+| A                     | ampere                          |
+| ㎄                    | kiloampere (1,000 amperes)      |
+| ㎃                    | milliampere (0.001 amperes)     |
+| μA                    | microampere (0.000001 amperes ) |
 
 </div>

@@ -20,6 +20,15 @@ The Arduino forums are a great place to ask questions about projects and to sear
 - [Make old telephones ring](https://forum.arduino.cc/t/making-old-telephone-s-ring/60821/9)
 - [Daft Punk Inspired LED Light Chase](https://forum.arduino.cc/index.php?topic=200736.0)
 
+### Arduino LED Heartbeat Code - From Arduino Forums
+
+Simple Code that blinks an LED on Pin 13 like a beating heart. It is amazing for its simplicity and brevity. [^1]
+
+```C
+void setup() { pinMode(13, OUTPUT); }
+void loop()  { digitalWrite(13, !(millis() & 640)); }
+```
+
 ## Electronics Tools
 
 - [Voltage Drop Calculator](https://www.calculator.net/voltage-drop-calculator.html)
@@ -28,3 +37,5 @@ The Arduino forums are a great place to ask questions about projects and to sear
 
 - [Pulse Heart Sensor Headband](https://pulsesensor.com/blogs/news/6327710-heartbeat-headband-dyi-video)
 - [Pulse Heart Sensor Headband Article on Makezine](https://makezine.com/projects/beating-heart-headband/)
+
+[^1]: First made by user dlloyd and then shortened by user nickgammon in this [Arduino Forum Post](https://forum.arduino.cc/t/trying-to-create-an-asymmetrical-blink-without-delay-please-help/294231/30)
