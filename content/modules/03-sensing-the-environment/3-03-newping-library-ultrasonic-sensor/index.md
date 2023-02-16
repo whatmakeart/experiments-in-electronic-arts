@@ -1,5 +1,5 @@
 ---
-title: "3.06 - NewPing Library for Ultrasonic Sensor"
+title: "03.06 - NewPing Library for Ultrasonic Sensor"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---

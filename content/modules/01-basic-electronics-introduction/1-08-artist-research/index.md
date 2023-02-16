@@ -1,5 +1,5 @@
 ---
-title: "1.8 Artist Research"
+title: "01.08 Artist Research"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---

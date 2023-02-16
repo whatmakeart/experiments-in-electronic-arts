@@ -1,5 +1,5 @@
 ---
-title: "4.03 Crimping Wires"
+title: "04.03 Crimping Wires"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---

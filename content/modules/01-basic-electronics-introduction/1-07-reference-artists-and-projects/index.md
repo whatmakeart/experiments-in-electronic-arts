@@ -1,5 +1,5 @@
 ---
-title: "1.7 Reference Artists and Projects"
+title: "01.07 Reference Artists and Projects"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---

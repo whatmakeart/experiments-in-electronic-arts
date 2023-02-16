@@ -1,5 +1,5 @@
 ---
-title: "2.06 Arduino Button Debounce"
+title: "02.06 Arduino Button Debounce"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---

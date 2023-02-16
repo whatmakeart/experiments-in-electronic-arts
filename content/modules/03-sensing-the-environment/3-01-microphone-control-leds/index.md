@@ -1,5 +1,5 @@
 ---
-title: "3.01 - Microphone - Control LED Levels"
+title: "03.01 - Microphone - Control LED Levels"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---

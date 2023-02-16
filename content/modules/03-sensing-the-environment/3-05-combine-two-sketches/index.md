@@ -1,5 +1,5 @@
 ---
-title: "3.05 Combine Two Sketches"
+title: "03.05 Combine Two Sketches"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---
@@ -33,7 +33,7 @@ The information before `setup();` includes libraries, variables, and other param
 
 Look for duplicate pin assignments. If two variables such as two LEDs share pin 13, then you could change one to pin 10 or pin 8 or another open digital pin.
 
-Look for duplicate variable names. If names are duplicated, determine if both varaiables are needed or if only one is. If there are two variables called `led` then you probably need to rename one to `led1` and the other to `led2` but if there are two variables labeled `currentMilliseconds` then you only need to keep one because you only need to have the current time recorded in one variable.
+Look for duplicate variable names. If names are duplicated, determine if both variables are needed or if only one is. If there are two variables called `led` then you probably need to rename one to `led1` and the other to `led2` but if there are two variables labeled `currentMilliseconds` then you only need to keep one because you only need to have the current time recorded in one variable.
 
 If you change a variable name before setup then it need to be changed everywhere in the code.
 

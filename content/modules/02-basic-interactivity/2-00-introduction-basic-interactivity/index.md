@@ -1,5 +1,5 @@
 ---
-title: "2.0 - Introduction to Interactivity"
+title: "02.00 - Introduction to Interactivity"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---

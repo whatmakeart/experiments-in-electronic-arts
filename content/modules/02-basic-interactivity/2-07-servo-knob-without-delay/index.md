@@ -1,5 +1,5 @@
 ---
-title: "2.07 Servo Knob Without Delay"
+title: "02.07 Servo Knob Without Delay"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---

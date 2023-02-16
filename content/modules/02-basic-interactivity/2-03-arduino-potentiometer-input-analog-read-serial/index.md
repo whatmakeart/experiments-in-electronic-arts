@@ -1,5 +1,5 @@
 ---
-title: "2.03 Arduino Potentiometer Input Analog Read Serial"
+title: "02.03 Arduino Potentiometer Input Analog Read Serial"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---

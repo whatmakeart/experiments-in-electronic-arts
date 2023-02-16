@@ -1,5 +1,5 @@
 ---
-title: "1.02 - Electrical Safety"
+title: "01.02 - Electrical Safety"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---
