@@ -50,6 +50,12 @@ This is very useful for testing circuits and solder connections. It can be used 
 
 ## Measuring Current
 
+Measuring current with a multimeter is bit more involved and can be dangerous if care is not taken. Most multimeters have a 10A setting and a mA setting for measuring current. Unless you are absolutely sure you are measuring a low current device, it is always best to start with the 10A setting. Put the black probe in COM and the red probe in the 10A port. Turn the knob to 10A or the A setting.
+
+Unlike the other measurements that use both probes to touch the positive and negative or the hot and neutral in parallel, to read current the probes must touch the circuit in series. What does that mean?
+
+[![Multimeter Readings Illustration](2023-multimeter-readings-illustration.jpg)](2023-multimeter-readings-illustration.jpg)
+
 <div class="responsive-table-markdown">
 
 | Multimeter Symbol | Meaning                         |
