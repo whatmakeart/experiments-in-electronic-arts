@@ -18,6 +18,8 @@ The leads or probes connect to a series of ports along the bottom. It is importa
 
 The black lead / probe will always be in the COM or common port. The red lead will move to different ports. To measure voltage the red lead goes into the voltage port and to measure amps it goes into the 10A port unless you are measuring very small current.
 
+[![Multimeter Readings Illustration](2023-multimeter-readings-illustration.jpg)](2023-multimeter-readings-illustration.jpg)
+
 ## Measuring Voltage
 
 Some multimeters automatically sense the voltage range but many require the use to select the range for the voltage reading. WHen you have no idea what the voltage will be it is best to start with the highest range and then move to lower ranges. If you have an idea of what the voltage will be, for example measuring a battery, then you can pick a range that is in line with your expected voltage reading.
@@ -53,8 +55,6 @@ This is very useful for testing circuits and solder connections. It can be used 
 Measuring current with a multimeter is bit more involved and can be dangerous if care is not taken. Most multimeters have a 10A setting and a mA setting for measuring current. Unless you are absolutely sure you are measuring a low current device, it is always best to start with the 10A setting. Put the black probe in COM and the red probe in the 10A port. Turn the knob to 10A or the A setting.
 
 Unlike the other measurements that use both probes to touch the positive and negative or the hot and neutral in parallel, to read current the probes must touch the circuit in series. What does that mean?
-
-[![Multimeter Readings Illustration](2023-multimeter-readings-illustration.jpg)](2023-multimeter-readings-illustration.jpg)
 
 <div class="responsive-table-markdown">
 
