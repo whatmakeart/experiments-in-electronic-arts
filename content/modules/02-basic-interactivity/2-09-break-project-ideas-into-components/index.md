@@ -25,12 +25,12 @@ For example, if you wanted to make a toaster you might break it up into the foll
 - Determine distribution of heat
 - Have user input to decide on "doneness"
 
-Then each part can be investigated and expeerimented with individually.
+Then each part can be investigated and experimented with individually.
 
 There will be many parts of your project you might have no idea how to do. No problem. Do your best to **describe** each thing that must happen for your project to work.
 
 The final projects must at a minimum:
 
 - Have user input
-- Sense the enviroment
+- Sense the environment
 - Do something based on this information
