@@ -4,6 +4,8 @@ date: 2020-01-26T23:11:13Z
 draft: false
 ---
 
+[![Prototyping Triangle](2023-prototyping-triangle.jpg)](2023-prototyping-triangle.jpg)
+
 Making a new electronics project can be broken into three main categories:
 
 - Software
