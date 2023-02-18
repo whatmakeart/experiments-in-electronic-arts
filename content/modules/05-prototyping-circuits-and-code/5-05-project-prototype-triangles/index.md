@@ -32,51 +32,34 @@ Now that we have moved past the initial proposal stage of out electronics projec
 
 ## Example
 
-### Toaster Hardware
-
-<div class="responsive-table-markdown">
-
-| Component                          | Description                                                                     | Status      | Next Step to Make Progress                        |
-| ---------------------------------- | ------------------------------------------------------------------------------- | ----------- | ------------------------------------------------- |
-| Lever to raise and lower toast     | This lever is needed to move the toast and the body needs to be built around it | Not Started | Design toast receiver                             |
-| Heating element                    | Heats the toast and is on both side of the toaster, controlled by a timer       | Not Started | Buy heating element to test settings              |
-| Power Supply / cord                | Used to put power safely into the toaster                                       | Not Started | Buy long enough cord                              |
-| Knob to select toast doneness      | Could have 3-4 settings for light, medium, dark, burnt                          | In progress | Hook up to Timer to make different time durations |
-| Mechanism to raise and lower toast | Needed to get the toast in and out of the toaster                               | Not Started | Research different mechanisms and take notes      |
-| LED to indicate that Toaster is on | Safety feature to let people know that the toaster is on.                       | Completed   | Have code that switches LED on when desired       |
-
-</div>
-
-### Toaster Software
-
-<div class="responsive-table-markdown">
-
-| Component                   | Description                                                              | Status      | Next Step to Make Progress                            |
-| --------------------------- | ------------------------------------------------------------------------ | ----------- | ----------------------------------------------------- |
-| `checkIfToastInserted(); `  | Check if toast is inserted and lever is pressed down                     | In Progress | Test distance settings with sensor                    |
-| `checkToastSetting(); `     | Check if toaster is set to light or dark                                 | Not Started | Get Photo Sensor                                      |
-| `setTimer();`               | Set timer based on the toast setting                                     | In progress | Make different timers based on knob setting           |
-| `turnOnHeatingElement();`   | If timer is set, then turn on the toaster heater                         | Not Started | Get relay to turn on heater                           |
-| `turnOnLED();`              | If heater is on, then turn on LED                                        | Completed   | N/A                                                   |
-| `checkTimer();`             | Check if the timer is finished                                           | In progress | Convert `millis();` timer to toast timer              |
-| `turnOffHeatingElement(); ` | If timer is finished, then turn off the toaster heater                   | Not Started | Use relay to turn off heating element                 |
-| `turnOffLED();`             | If heater is off, then turn of LED                                       | Completed   | N/A                                                   |
-| `popUpToast();`             | If the heating element and the timer are finished, then pop up the toast | Not Started | Translate LED blink to pop up                         |
-| `waitForNewToast();`        | Standby mode waiting for a new piece of toast                            | Not Started | Decide how long to wait before checking for new toast |
-
-</div>
-
-### Toaster Structure
-
-<div class="responsive-table-markdown">
-
-| Component                             | Description                                                         | Status      | Next Step to Make Progress                                    |
-| ------------------------------------- | ------------------------------------------------------------------- | ----------- | ------------------------------------------------------------- |
-| Exterior Housing                      | Protective layer that keeps heat and electricity inside the toaster | Not Started | Make a sketch of the housing that fits around parts           |
-| Interior brackets and mounting points | Used to hold the mechanisms and heating element in place            | Not Started | Measure objects to design bracket at correct size             |
-| Screws                                | Keep everything in place                                            | Not Started | Look at existing toasters to see what type of screws are used |
-| Heat shielding                        | Barrier between the electronics and the heating element             | Not Started | Get piece of metal to test distance from heating element      |
-| Gap for lever to move                 | Space for the lever to move                                         | Not Started | Measure the lever                                             |
-| Opening for toast                     | Allows the toast to be put in, should be wide                       | Not Started | Measure different pieces of bread                             |
+<div class="responsive-table-markdown"
+>
+| **Component**                         | **Description**                                                                 | **Status**  | **Next Step to Make Progress**                                |
+| ------------------------------------- | ------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------- |
+| **Hardware**                          |                                                                                 |             |                                                               |
+| Lever to raise and lower toast        | This lever is needed to move the toast and the body needs to be built around it | Not Started | Design toast receiver                                         |
+| Heating element                       | Heats the toast and is on both side of the toaster, controlled by a timer       | Not Started | Buy heating element to test settings                          |
+| Power Supply / cord                   | Used to put power safely into the toaster                                       | Not Started | Buy long enough cord                                          |
+| Knob to select toast doneness         | Could have 3-4 settings for light, medium, dark, burnt                          | In progress | Hook up to Timer to make different time durations             |
+| Mechanism to raise and lower toast    | Needed to get the toast in and out of the toaster                               | Not Started | Research different mechanisms and take notes                  |
+| LED to indicate that Toaster is on    | Safety feature to let people know that the toaster is on.                       | Completed   | Have code that switches LED on when desired                   |
+| **Software**                          |                                                                                 |             |                                                               |
+| `checkIfToastInserted(); `            | Check if toast is inserted and lever is pressed down                            | In Progress | Test distance settings with sensor                            |
+| `checkToastSetting(); `               | Check if toaster is set to light or dark                                        | Not Started | Get Photo Sensor                                              |
+| `setTimer();`                         | Set timer based on the toast setting                                            | In progress | Make different timers based on knob setting                   |
+| `turnOnHeatingElement();`             | If timer is set, then turn on the toaster heater                                | Not Started | Get relay to turn on heater                                   |
+| `turnOnLED();`                        | If heater is on, then turn on LED                                               | Completed   | N/A                                                           |
+| `checkTimer();`                       | Check if the timer is finished                                                  | In progress | Convert `millis();` timer to toast timer                      |
+| `turnOffHeatingElement(); `           | If timer is finished, then turn off the toaster heater                          | Not Started | Use relay to turn off heating element                         |
+| `turnOffLED();`                       | If heater is off, then turn of LED                                              | Completed   | N/A                                                           |
+| `popUpToast();`                       | If the heating element and the timer are finished, then pop up the toast        | Not Started | Translate LED blink to pop up                                 |
+| `waitForNewToast();`                  | Standby mode waiting for a new piece of toast                                   | Not Started | Decide how long to wait before checking for new toast         |
+| **Structure**                         |                                                                                 |             |                                                               |
+| Exterior Housing                      | Protective layer that keeps heat and electricity inside the toaster             | Not Started | Make a sketch of the housing that fits around parts           |
+| Interior brackets and mounting points | Used to hold the mechanisms and heating element in place                        | Not Started | Measure objects to design bracket at correct size             |
+| Screws                                | Keep everything in place                                                        | Not Started | Look at existing toasters to see what type of screws are used |
+| Heat shielding                        | Barrier between the electronics and the heating element                         | Not Started | Get piece of metal to test distance from heating element      |
+| Gap for lever to move                 | Space for the lever to move                                                     | Not Started | Measure the lever                                             |
+| Opening for toast                     | Allows the toast to be put in, should be wide                                   | Not Started | Measure different pieces of bread                             |
 
 </div>
