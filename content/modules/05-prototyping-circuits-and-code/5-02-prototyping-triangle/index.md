@@ -29,16 +29,16 @@ The hardware of the toaster includes the parts that do something. The insulation
 
 A toaster could be built completely with analog components and no software, but if you wanted to use a microcontroller like the Arduino to control your toaster, you might break the software up into components like this. We will talk more about making software components, or functions, in another section.
 
-- `checkIfToastInserted();   // checks if toast is inserted and lever is pressed down`
-- `checkToastSetting();      // checks if toaster is set to light or dark`
-- `setTimer();               // Sets timer based on the toast setting`
-- `turnOnHeatingElement();   // If time is set, then turn on the toaster heater`
-- `turnOnLED();              // If heater is on, then turn on LED`
-- `checkTimer();             // checks if the timer is finished`
-- `turnOffHeatingElement();  // if timer is finished, then turn off the toaster heater`
-- `turnOffLED();             // If heater is off, then turn of LED`
-- `popUpToast();             // If the heating element and the timer are finished, then pop up the toast`
-- `waitForNewToast();        // Standby mode waiting for a new piece of toast`
+- Check if toast is inserted and lever is pressed down
+- Check if toaster is set to light or dark
+- Set timer based on the toast setting
+- If timer is set, then turn on the toaster heater
+- If heater is on, then turn on LED
+- Check if the timer is finished
+- If timer is finished, then turn off the toaster heater
+- If heater is off, then turn of LED
+- If the heating element and the timer are finished, then pop up the toast
+- Standby mode waiting for a new piece of toast
 
 ## Toaster Structure
 
