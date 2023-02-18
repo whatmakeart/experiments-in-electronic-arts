@@ -5,7 +5,7 @@ draft: false
 ---
 
 <div class="video-grid">
-<div class="video-card>
+<div class="video-card">
 
 ### Turn Code into a Function
 
