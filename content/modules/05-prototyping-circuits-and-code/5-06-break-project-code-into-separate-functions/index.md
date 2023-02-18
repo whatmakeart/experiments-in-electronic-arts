@@ -58,8 +58,8 @@ Below is an example program for the Toaster example. Your functions will be diff
 ```C
 void setup() {
   // put your setup code here, to run once:
-  serialBegin(9600);                            // Begin the serial monitor at speed 9600
-  serialPrint("Starting Tasty Toast Program");  // Send a message to indicate the sketch started
+  Serial.begin(9600);                            // Begin the serial monitor at speed 9600
+  Serial.print("Starting Tasty Toast Program");  // Send a message to indicate the sketch started
 }
 
 void loop() {
