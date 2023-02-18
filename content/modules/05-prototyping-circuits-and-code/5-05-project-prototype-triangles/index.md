@@ -32,8 +32,8 @@ Now that we have moved past the initial proposal stage of out electronics projec
 
 ## Example
 
-<div class="responsive-table-markdown"
->
+<div class="responsive-table-markdown">
+
 | **Component**                         | **Description**                                                                 | **Status**  | **Next Step to Make Progress**                                |
 | ------------------------------------- | ------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------- |
 | **Hardware**                          |                                                                                 |             |                                                               |
