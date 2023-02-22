@@ -16,6 +16,8 @@ int eastWestRed = 9;
 int eastWestYellow = 8;
 int eastWestGreen = 7;
 
+#define LED_NUMBER 6
+
 enum states {
   Start_All_Red,        // start with all red
   NS_Green_EW_Red,      // North South Green and East West Red
@@ -32,15 +34,19 @@ unsigned long currentMillis;  // keeps track of current time in Milliseconds
 unsigned long startTimer;     // tracks last time startTimer expired
 unsigned long trafficTimer;   // tracks last time trafficTimer
 
+byte LEDPinArray[LED_NUMBER] = { northSouthRed,
+                                 northSouthYellow,
+                                 northSouthGreen,
+                                 eastWestRed,
+                                 eastWestYellow,
+                                 eastWestGreen };
 
 
 void setup() {
-  pinMode(northSouthRed, OUTPUT);
-  pinMode(northSouthYellow, OUTPUT);
-  pinMode(northSouthGreen, OUTPUT);
-  pinMode(eastWestRed, OUTPUT);
-  pinMode(eastWestYellow, OUTPUT);
-  pinMode(eastWestGreen, OUTPUT);
+
+  for (int i = 0; i < LED_NUMBER; i++) {
+    pinMode(LEDPinArray[i], OUTPUT);
+  }
 
   startTimer = millis();  // sets the first startup timer to the current time
 }
