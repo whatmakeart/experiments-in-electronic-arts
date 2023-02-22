@@ -163,6 +163,8 @@ https://www.forward.com.au/pfod/ArduinoProgramming/TimingDelaysInArduino.html
 
 ## State Machine Resources
 
+[State Machine with Structure Timer by Larry D](https://forum.arduino.cc/t/state-machine-and-timers-medium-level-tutorial/504662)
+
 [State Machine Tutorial](http://www.thebox.myzen.co.uk/Tutorial/State_Machine.html)
 
 [Fruit Basket State Machine](https://forum.arduino.cc/t/can-multiple-millis-be-used-for-independent-events-without-slowing-the-loop/291868/7) by Larry D
