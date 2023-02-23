@@ -3,6 +3,7 @@
 :root {
   --text-max-width: 700px;
   --page-max-width: 1366px;
+  --wide-max-width: 900px; /* for wider items such as wide images or code or embeds */
 }
 
 html {
@@ -147,6 +148,7 @@ a {
   height: 0px;
   padding-top: 62.48275862068966%;
   margin: 0 auto;
+  max-width: var(--wide-max-width);
 }
 
 .youTubeIframe,
@@ -263,7 +265,7 @@ pre {
 }
 
 .highlight-wrapper {
-  max-width: 900px;
+  max-width: var(--wide-max-width);
 
   margin: 0 auto;
 

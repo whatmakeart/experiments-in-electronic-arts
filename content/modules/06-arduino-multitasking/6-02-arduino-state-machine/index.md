@@ -5,10 +5,11 @@ draft: false
 ---
 
 ```C
+
 // Traffic Light State Machine
 // Traffic Light LED Pins
 
-const byte  northSouthRed = 12;
+const byte northSouthRed = 12;
 const byte northSouthYellow = 11;
 const byte northSouthGreen = 10;
 
@@ -32,15 +33,14 @@ unsigned long currentMillis;  // keeps track of current time in Milliseconds
 unsigned long startTimer;     // tracks last time startTimer expired
 unsigned long trafficTimer;   // tracks last time trafficTimer
 
-
 const byte LEDPinArray[] = { northSouthRed,
-                                 northSouthYellow,
-                                 northSouthGreen,
-                                 eastWestRed,
-                                 eastWestYellow,
-                                 eastWestGreen };
+                             northSouthYellow,
+                             northSouthGreen,
+                             eastWestRed,
+                             eastWestYellow,
+                             eastWestGreen };
 
-const byte LED_NUMBER = sizeof(LEDPinArray);
+const byte LED_NUMBER = sizeof(LEDPinArray);  // get the size of the array and store as variable
 
 void setup() {
   // use a for loop to iterate through the array of LED pins
@@ -48,7 +48,7 @@ void setup() {
     pinMode(LEDPinArray[i], OUTPUT);
   }
 
-  startTimer = millis();  // sets the first startup timer to the current time
+  startTimer = millis();  // sets the startup timer to the current time
 }
 
 void loop() {
@@ -56,92 +56,65 @@ void loop() {
 
   switch (trafficState) {
     case Start_All_Red:
-      digitalWrite(northSouthRed, HIGH);
-      digitalWrite(northSouthYellow, LOW);
-      digitalWrite(northSouthGreen, LOW);
-      digitalWrite(eastWestRed, HIGH);
-      digitalWrite(eastWestYellow, LOW);
-      digitalWrite(eastWestGreen, LOW);
+
+      changeTrafficLightLEDs(1, 0, 0, 1, 0, 0);
+
       if (checkTime(startTimer, 500UL)) {
-        trafficTimer = currentMillis;    // reset the trafficTimer
+        trafficTimer = currentMillis;    // start the trafficTimer
         trafficState = NS_Green_EW_Red;  // new state
       }
       break;
 
     case NS_Green_EW_Red:
-      digitalWrite(northSouthRed, LOW);
-      digitalWrite(northSouthYellow, LOW);
-      digitalWrite(northSouthGreen, HIGH);
-      digitalWrite(eastWestRed, HIGH);
-      digitalWrite(eastWestYellow, LOW);
-      digitalWrite(eastWestGreen, LOW);
+
+      changeTrafficLightLEDs(0, 0, 1, 1, 0, 0);
+
       if (checkTime(trafficTimer, 5000UL)) {
-        trafficTimer = currentMillis;
         trafficState = NS_Yellow_EW_Red;  // new state
       }
       break;
 
     case NS_Yellow_EW_Red:
-      digitalWrite(northSouthRed, LOW);
-      digitalWrite(northSouthYellow, HIGH);
-      digitalWrite(northSouthGreen, LOW);
-      digitalWrite(eastWestRed, HIGH);
-      digitalWrite(eastWestYellow, LOW);
-      digitalWrite(eastWestGreen, LOW);
+
+      changeTrafficLightLEDs(0, 1, 0, 1, 0, 0);
+
       if (checkTime(trafficTimer, 2000UL)) {
-        trafficTimer = currentMillis;        // reset the trafficTimer
         trafficState = NS_to_EW_Transition;  // new state
       }
       break;
 
     case NS_to_EW_Transition:
-      digitalWrite(northSouthRed, HIGH);
-      digitalWrite(northSouthYellow, LOW);
-      digitalWrite(northSouthGreen, LOW);
-      digitalWrite(eastWestRed, HIGH);
-      digitalWrite(eastWestYellow, LOW);
-      digitalWrite(eastWestGreen, LOW);
+
+      changeTrafficLightLEDs(1, 0, 0, 1, 0, 0);
+
       if (checkTime(trafficTimer, 1000UL)) {
-        trafficTimer = currentMillis;    // reset the trafficTimer
         trafficState = NS_Red_EW_Green;  // new state
       }
       break;
 
     case NS_Red_EW_Green:
-      digitalWrite(northSouthRed, HIGH);
-      digitalWrite(northSouthYellow, LOW);
-      digitalWrite(northSouthGreen, LOW);
-      digitalWrite(eastWestRed, LOW);
-      digitalWrite(eastWestYellow, LOW);
-      digitalWrite(eastWestGreen, HIGH);
+
+      changeTrafficLightLEDs(1, 0, 0, 0, 0, 1);
+
       if (checkTime(trafficTimer, 5000UL)) {
-        trafficTimer = currentMillis;     // reset the trafficTimer
         trafficState = NS_Red_EW_Yellow;  // new state
       }
       break;
 
     case NS_Red_EW_Yellow:
-      digitalWrite(northSouthRed, HIGH);
-      digitalWrite(northSouthYellow, LOW);
-      digitalWrite(northSouthGreen, LOW);
-      digitalWrite(eastWestRed, LOW);
-      digitalWrite(eastWestYellow, HIGH);
-      digitalWrite(eastWestGreen, LOW);
+
+      changeTrafficLightLEDs(1, 0, 0, 0, 1, 0);
+
       if (checkTime(trafficTimer, 2000UL)) {
-        trafficTimer = currentMillis;        // reset the trafficTimer
         trafficState = EW_to_NS_Transition;  // new state
       }
       break;
 
     case EW_to_NS_Transition:
-      digitalWrite(northSouthRed, HIGH);
-      digitalWrite(northSouthYellow, LOW);
-      digitalWrite(northSouthGreen, LOW);
-      digitalWrite(eastWestRed, HIGH);
-      digitalWrite(eastWestYellow, LOW);
-      digitalWrite(eastWestGreen, LOW);
+
+      changeTrafficLightLEDs(1, 0, 0, 1, 0, 0);
+
       if (checkTime(trafficTimer, 500UL)) {
-        trafficTimer = currentMillis;    // reset the trafficTimer
         trafficState = NS_Green_EW_Red;  // new state
       }
       break;
@@ -152,14 +125,25 @@ void loop() {
 }  // end of loop
 
 // BEGIN CheckTime()
-boolean checkTime(unsigned long lastTimerExpiredTime, unsigned long timerLength) {
+boolean checkTime(unsigned long &lastTimerExpiredTime, unsigned long timerLength) {
   // is the time up for this task?
   if (currentMillis - lastTimerExpiredTime >= timerLength) {
+    lastTimerExpiredTime += timerLength;  //get ready for the next iteration
     return true;
   }
   return false;
 }
 //END CheckTime()
+
+
+void changeTrafficLightLEDs(byte NSR, byte NSY, byte NSG, byte EWR, byte EWY, byte EWG) {
+  digitalWrite(northSouthRed, NSR);
+  digitalWrite(northSouthYellow, NSY);
+  digitalWrite(northSouthGreen, NSG);
+  digitalWrite(eastWestRed, EWR);
+  digitalWrite(eastWestYellow, EWY);
+  digitalWrite(eastWestGreen, EWG);
+}
 
 ```
 
@@ -180,5 +164,3 @@ https://www.forward.com.au/pfod/ArduinoProgramming/TimingDelaysInArduino.html
 [State Machine Tutorial](http://www.thebox.myzen.co.uk/Tutorial/State_Machine.html)
 
 [Fruit Basket State Machine](https://forum.arduino.cc/t/can-multiple-millis-be-used-for-independent-events-without-slowing-the-loop/291868/7) by Larry D
-
-arduino inputs - http://www.thebox.myzen.co.uk/Tutorial/Inputs.html
