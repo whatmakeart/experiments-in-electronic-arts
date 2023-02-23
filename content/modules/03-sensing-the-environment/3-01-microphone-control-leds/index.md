@@ -8,7 +8,7 @@ This example uses an electret condenser microphone module to control the blinkin
 
 ## Basic Mic Module Circuit Hook Up
 
-[![Basic Mic Module Circuit](basic-microphone-circuit.jpg)]basic-microphone-circuit.jpg)
+[![Basic Mic Module Circuit](basic-microphone-circuit.jpg)](basic-microphone-circuit.jpg)
 
 ## Basic Mic Code
 

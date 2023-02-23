@@ -165,7 +165,9 @@ boolean checkTime(unsigned long lastTimerExpiredTime, unsigned long timerLength)
 
 ## Example on TinkerCad
 
-<iframe width="725" height="453" src="https://www.tinkercad.com/embed/7bc8ETRwlql?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<div class="iframe-tinkercad-container">
+<iframe class="responsiveIframe" width="725" height="453" src="https://www.tinkercad.com/embed/7bc8ETRwlql?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</div>
 
 https://www.forward.com.au/pfod/ArduinoProgramming/RealTimeArduino/index.html
 
