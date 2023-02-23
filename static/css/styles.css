@@ -266,9 +266,7 @@ pre {
 
 .highlight-wrapper {
   max-width: var(--wide-max-width);
-
   margin: 0 auto;
-
   overflow-x: scroll;
   display: block;
 }
