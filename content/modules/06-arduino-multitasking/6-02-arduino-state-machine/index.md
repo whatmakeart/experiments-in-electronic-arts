@@ -175,15 +175,17 @@ void changeTrafficLightLEDs(byte NSR, byte NSY, byte NSG, byte EWR, byte EWY, by
 
 ```
 
-## Example on TinkerCad
+## Example Traffic Light State Machine on TinkerCad
 
 <div class="iframe-tinkercad-container">
 <iframe class="responsiveIframe" width="725" height="453" src="https://www.tinkercad.com/embed/7bc8ETRwlql?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 </div>
 
-https://www.forward.com.au/pfod/ArduinoProgramming/RealTimeArduino/index.html
+## Arduino Multitasking Resources
 
-https://www.forward.com.au/pfod/ArduinoProgramming/TimingDelaysInArduino.html
+[Simple Multitasking Arduino](https://www.forward.com.au/pfod/ArduinoProgramming/RealTimeArduino/index.html) by Matthew Ford
+
+[How to code Timers and Delays in Arduino](https://www.forward.com.au/pfod/ArduinoProgramming/TimingDelaysInArduino.html) by Matthew Ford
 
 ## State Machine Resources
 
