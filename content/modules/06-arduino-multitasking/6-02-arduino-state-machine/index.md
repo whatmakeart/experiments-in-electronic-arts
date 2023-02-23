@@ -8,15 +8,13 @@ draft: false
 // Traffic Light State Machine
 // Traffic Light LED Pins
 
-int northSouthRed = 12;
-int northSouthYellow = 11;
-int northSouthGreen = 10;
+const byte  northSouthRed = 12;
+const byte northSouthYellow = 11;
+const byte northSouthGreen = 10;
 
-int eastWestRed = 9;
-int eastWestYellow = 8;
-int eastWestGreen = 7;
-
-#define LED_NUMBER 6
+const byte eastWestRed = 9;
+const byte eastWestYellow = 8;
+const byte eastWestGreen = 7;
 
 enum states {
   Start_All_Red,        // start with all red
@@ -34,16 +32,18 @@ unsigned long currentMillis;  // keeps track of current time in Milliseconds
 unsigned long startTimer;     // tracks last time startTimer expired
 unsigned long trafficTimer;   // tracks last time trafficTimer
 
-byte LEDPinArray[LED_NUMBER] = { northSouthRed,
+
+const byte LEDPinArray[] = { northSouthRed,
                                  northSouthYellow,
                                  northSouthGreen,
                                  eastWestRed,
                                  eastWestYellow,
                                  eastWestGreen };
 
+const byte LED_NUMBER = sizeof(LEDPinArray);
 
 void setup() {
-
+  // use a for loop to iterate through the array of LED pins
   for (int i = 0; i < LED_NUMBER; i++) {
     pinMode(LEDPinArray[i], OUTPUT);
   }
@@ -162,6 +162,10 @@ boolean checkTime(unsigned long lastTimerExpiredTime, unsigned long timerLength)
 //END CheckTime()
 
 ```
+
+## Example on TinkerCad
+
+<iframe width="725" height="453" src="https://www.tinkercad.com/embed/7bc8ETRwlql?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 https://www.forward.com.au/pfod/ArduinoProgramming/RealTimeArduino/index.html
 
