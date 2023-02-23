@@ -1,8 +1,36 @@
 ---
-title: "06.02 Aruduino State Machine"
+title: "06.02 Arduino State Machine"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---
+
+## What is a State Machine?
+
+A state machine is a series of "states" that a program can be in. Each of the states may have tasks and then wait for inputs or reasons to move to another state. It is like a report on the status of a system as it waits for a command to change or transition to other state. There can be Deterministic Finite State machines, where each state can only move to one other state, and Non-Deterministic Finite State Machines, where states can move to more than one state from a specific state.[^1]Beyond simple applications, state machines can become unwieldy as the number os states increases. A Unified Modeling Language (UML) State Machine allows for more complexity than a finite state machine without adding more states.[^2] A state machine is an ideal way to control and schedule an electronics project on an Arduino or other micro-controller.
+
+## Sleep / Awake State Machine Example
+
+A simple human sleeping vs being awake state machine might have two states, sleeping and awake. The inputs to change states could be hearing an alarm and getting tired.
+
+**Awake State** - Am I tired? Yes, then go to sleep. No, then stay awake.
+**Sleep State** - Did the Alarm go off? Yes, then wake up. No, then stay asleep.
+
+## Traffic Light State Machine Example
+
+Another example of a state machine could be a traffic light. If the state is traffic traveling on the north/south road with a green light, then you definitely want the east/west road to have a red light. The lights can't work on individual timers since that would allow them to sometimes both be green and then, crash. You could think about this traffic state machine as having two states, either traffic is going north and south or traffic is going east and west. But what about the transition between directions? Should there be a state for yellow lights? Should there be a state with all lights red for a short period before switching directions? As a sequence is analyzed more states and transitions become apparent.
+
+Then we would have the following states:
+
+- North/South Green and East/West Red State
+- North/South Yellow and East/West Red State
+- North/South Red and East/West Red Switch to East/West State
+- North/South Red and East/West Green State
+- North/South Red and East/West Yellow State
+- North/South Red and East/West Red Switch to North/South State
+
+This is only controlling the lights with timers. It is not taking into account turn lanes, or sensors that detect the presence of cars. That would create more states and more inputs. Using a state machine helps control a complex sequence by defining what happens during a state and the conditions for that state to change to another state. This can help with testing code since you can work on the code for one state at a time.
+
+### Traffic Light Example State Machine Code
 
 ```C
 
@@ -164,3 +192,6 @@ https://www.forward.com.au/pfod/ArduinoProgramming/TimingDelaysInArduino.html
 [State Machine Tutorial](http://www.thebox.myzen.co.uk/Tutorial/State_Machine.html)
 
 [Fruit Basket State Machine](https://forum.arduino.cc/t/can-multiple-millis-be-used-for-independent-events-without-slowing-the-loop/291868/7) by Larry D
+
+[^1]: https://developer.mozilla.org/en-US/docs/Glossary/State_machine [Web Archive](https://web.archive.org/web/20230113040311/https://developer.mozilla.org/en-US/docs/Glossary/State_machine)
+[^2]: https://en.wikipedia.org/wiki/UML_state_machine
