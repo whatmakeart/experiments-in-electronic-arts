@@ -10,7 +10,8 @@ enableRobotsTXT = true
 custom_css = "css/styles.css"
 
 pygmentsCodefences = true
-pygmentsStyle = "pygments"
+pygmentsUseClasses = true
+
 
 [sitemap]
   changefreq = "monthly"
@@ -44,17 +45,17 @@ disableHLJS = true
 [markup.highlight]
   anchorLineNos = false
   codeFences = true
-   guessSyntax = false
-   hl_Lines = ''
-    hl_inline = false
-    lineAnchors = ''
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    noClasses = true
-    noHl = false
-    style = 'arduino'
-    tabWidth = 4
+  guessSyntax = false
+  hl_Lines = ''
+  hl_inline = false
+  lineAnchors = ''
+  lineNoStart = 1
+  lineNos = false
+  lineNumbersInTable = true
+  noClasses = true
+  noHl = false
+  style = 'arduino'
+  tabWidth = 4
 
 
     

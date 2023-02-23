@@ -32,7 +32,7 @@ This is only controlling the lights with timers. It is not taking into account t
 
 ### Traffic Light Example State Machine Code
 
-```C
+```arduino
 
 // Traffic Light State Machine
 // Traffic Light LED Pins

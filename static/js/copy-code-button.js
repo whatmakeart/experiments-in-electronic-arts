@@ -10,7 +10,13 @@ function createCopyButton(highlightDiv) {
 }
 
 async function copyCodeToClipboard(button, highlightDiv) {
-  const codeToCopy = highlightDiv.querySelector(":last-child > code").innerText;
+  const codeToCopy = highlightDiv
+    .querySelector(":last-child > code")
+    .innerText.replace(
+      /^\s*$[\r\n]*|^[^\S\r\n]+|[^\S\r\n]+$|([^\S\r\n]){2,}/gm,
+      "$1"
+    );
+
   try {
     result = await navigator.permissions.query({ name: "clipboard-write" });
     if (result.state == "granted" || result.state == "prompt") {
