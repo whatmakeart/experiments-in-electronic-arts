@@ -4,7 +4,7 @@ date: 2020-01-26T23:11:13Z
 draft: false
 ---
 
-The timer function below [^1] is from [Arduino Forum](https://forum.arduino.cc/) user, [Larry D](https://forum.arduino.cc/u/larryd). Larry D has other examples on the forums that expand this function into a [timer structure](https://forum.arduino.cc/t/millis-made-easier/378322/7), adapting the Blink Without Delay Example into [four different timer methods](https://forum.arduino.cc/t/millis-made-easier/378322/5), and a full [timer library](https://forum.arduino.cc/t/best-timer-library/944347/7).
+The timer function below [^1] is from [Arduino Forum](https://forum.arduino.cc/) user, [Larry D](https://forum.arduino.cc/u/larryd). Other examples on the forums that expand this function into a [timer structure](https://forum.arduino.cc/t/millis-made-easier/378322/7), adapting the Blink Without Delay Example into [four different timer methods](https://forum.arduino.cc/t/millis-made-easier/378322/5), and a full [timer library](https://forum.arduino.cc/t/best-timer-library/944347/7).
 
 This `boolean` function returns `true` or `false` depending if the timer is up or not. Using this function can simplify your code by not having the full `if` conditional in your various functions. It also uses a "reference" to automatically update the `lastMillis` variable. You need to declare a time keeping variable for each timer in your program, but by passing the time keeper variable to the function, it updates its value automatically by using a reference. That is the `&` in front of the variable in the function declaration.
 
