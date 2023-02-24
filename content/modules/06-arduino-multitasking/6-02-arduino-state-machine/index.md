@@ -32,7 +32,7 @@ This is only controlling the lights with timers. It is not taking into account t
 
 ### Traffic Light Example State Machine Code
 
-```arduino
+```C
 
 // Traffic Light State Machine
 // Traffic Light LED Pins
@@ -177,8 +177,28 @@ void changeTrafficLightLEDs(byte NSR, byte NSY, byte NSG, byte EWR, byte EWY, by
 
 ## Example Traffic Light State Machine on TinkerCad
 
+This is the above traffic light state machine using 6 LEDs on TinkerCad. Click the start simulation button to see the traffic lights turn on and off in the proper sequence based on the states in the state machine.
+
 <div class="iframe-tinkercad-container">
 <iframe class="responsiveIframe" width="725" height="453" src="https://www.tinkercad.com/embed/7bc8ETRwlql?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</div>
+
+## New Code Constructs
+
+The code above uses an `enum` that allows the declaration of a new type of variable. Up until now we have used `int` for number variables and `long` for big number variables. Additional variable types include, `char` for characters in ASCII, `byte` for small numbers, `float` for 32 bit decimal numbers. [^3]
+
+<div class="responsive-table-markdown">
+
+| Explicit Variable Name | Arduino Equivalent | Bits | Min Value      | Max Value     |
+| ---------------------- | ------------------ | ---- | -------------- | ------------- |
+| int8_t                 | byte               | 8    | 0              | 255           |
+| int8_t                 | char               | 8    | 0              | 255           |
+| uint8_t                | unsigned char      | 8    |                |               |
+| int16_t                | int                | 16   | -32,768        | +32,767       |
+| uint16_t               | unsigned int       | 16   | 0              | 65,535        |
+| int32_t                | long               | 32   | -2,147,483,648 | 2,147,483,647 |
+| uint32_t               | unsigned long      | 32   | 0              | 4,294,967,295 |
+
 </div>
 
 ## Arduino Multitasking Resources
@@ -196,4 +216,5 @@ void changeTrafficLightLEDs(byte NSR, byte NSY, byte NSG, byte EWR, byte EWY, by
 [Fruit Basket State Machine](https://forum.arduino.cc/t/can-multiple-millis-be-used-for-independent-events-without-slowing-the-loop/291868/7) by Larry D
 
 [^1]: https://developer.mozilla.org/en-US/docs/Glossary/State_machine [Web Archive](https://web.archive.org/web/20230113040311/https://developer.mozilla.org/en-US/docs/Glossary/State_machine)
-[^2]: https://en.wikipedia.org/wiki/UML_state_machine
+[^2]: [UML State Machine - Wikipedia](https://en.wikipedia.org/wiki/UML_state_machine)
+[^3]: [Arduino Reference](https://www.arduino.cc/reference/en/) [Web Archive](https://web.archive.org/web/20230209010601/https://www.arduino.cc/reference/en/)
