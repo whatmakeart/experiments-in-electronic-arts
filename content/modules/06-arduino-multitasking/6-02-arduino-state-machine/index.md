@@ -185,7 +185,7 @@ This is the above traffic light state machine using 6 LEDs on TinkerCad. Click t
 
 ## New Code Constructs
 
-The code above uses an `enum` that allows the declaration of a new type of variable. Up until now we have used `int` for number variables and `long` for big number variables. Additional variable types include, `char` for characters in ASCII, `byte` for small numbers, `float` for 32 bit decimal numbers. [^3]
+Up until now we have used `int` for number variables and `long` for big number variables. Additional variable types include, `char` for characters in ASCII, `byte` for small numbers, `float` for 32 bit decimal numbers. [^3]
 
 <div class="responsive-table-markdown">
 
@@ -200,6 +200,10 @@ The code above uses an `enum` that allows the declaration of a new type of varia
 | uint32_t               | unsigned long      | 32   | 0              | 4,294,967,295 |
 
 </div>
+
+### `enum`
+
+The state machine code above uses an `enum` that allows the declaration of a new type of variable. Once the new type is declared then you can "enumerate" the values that are allowed in this type. Other values will not be allowed. You could create an `enum` of `fruit` and give is permissible values of `bannana, apple, grape, strawberry`. That just creates a new type of variable `fruit` that is like `int`. Then you could create a variable of the `fruit` type such as `enum fruit todaysFruit = grape;`. That creates a new variable `todaysFruit` with the value of `grape`.
 
 ## Arduino Multitasking Resources
 
