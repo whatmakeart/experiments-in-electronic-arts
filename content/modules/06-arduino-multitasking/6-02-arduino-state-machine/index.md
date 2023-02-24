@@ -193,7 +193,7 @@ The code above uses an `enum` that allows the declaration of a new type of varia
 | ---------------------- | ------------------ | ---- | -------------- | ------------- |
 | int8_t                 | byte               | 8    | 0              | 255           |
 | int8_t                 | char               | 8    | 0              | 255           |
-| uint8_t                | unsigned char      | 8    |                |               |
+| uint8_t                | unsigned char      | 8    | 0              | 255           |
 | int16_t                | int                | 16   | -32,768        | +32,767       |
 | uint16_t               | unsigned int       | 16   | 0              | 65,535        |
 | int32_t                | long               | 32   | -2,147,483,648 | 2,147,483,647 |
