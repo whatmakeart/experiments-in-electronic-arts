@@ -12,10 +12,7 @@ function createCopyButton(highlightDiv) {
 async function copyCodeToClipboard(button, highlightDiv) {
   const codeToCopy = highlightDiv
     .querySelector(":last-child > code")
-    .innerText.replace(
-      /^\s*$[\r\n]*|^[^\S\r\n]+|[^\S\r\n]+$|([^\S\r\n]){2,}/gm,
-      "$1"
-    );
+    .innerText.replace(/(\n)+/g, "$1"); // replaces all empty lines, investigate how to leave some lines
 
   try {
     result = await navigator.permissions.query({ name: "clipboard-write" });

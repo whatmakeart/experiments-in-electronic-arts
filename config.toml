@@ -10,7 +10,7 @@ enableRobotsTXT = true
 custom_css = "css/styles.css"
 
 pygmentsCodefences = true
-pygmentsUseClasses = true
+# pygmentsUseClasses = true
 
 
 [sitemap]
