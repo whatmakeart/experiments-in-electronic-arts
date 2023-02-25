@@ -1,5 +1,5 @@
 ---
-title: "06.04 Fabricate Project Structure"
+title: "06.05 Fabricate Project Structure"
 date: 2020-01-26T23:11:13Z
 draft: false
 ---

@@ -37,13 +37,13 @@ This is only controlling the lights with timers. It is not taking into account t
 // Traffic Light State Machine
 // Traffic Light LED Pins
 
-const byte northSouthRed = 12;
-const byte northSouthYellow = 11;
-const byte northSouthGreen = 10;
+const unsigned char  northSouthRed = 12;
+const unsigned char  northSouthYellow = 11;
+const unsigned char  northSouthGreen = 10;
 
-const byte eastWestRed = 9;
-const byte eastWestYellow = 8;
-const byte eastWestGreen = 7;
+const unsigned char  eastWestRed = 9;
+const unsigned char  eastWestYellow = 8;
+const unsigned char eastWestGreen = 7;
 
 enum states {
   Start_All_Red,        // start with all red
@@ -61,14 +61,14 @@ unsigned long currentMillis;  // keeps track of current time in Milliseconds
 unsigned long startTimer;     // tracks last time startTimer expired
 unsigned long trafficTimer;   // tracks last time trafficTimer
 
-const byte LEDPinArray[] = { northSouthRed,
+const unsigned char  LEDPinArray[] = { northSouthRed,
                              northSouthYellow,
                              northSouthGreen,
                              eastWestRed,
                              eastWestYellow,
                              eastWestGreen };
 
-const byte LED_NUMBER = sizeof(LEDPinArray);  // get the size of the array and store as variable
+const unsigned char  LED_NUMBER = sizeof(LEDPinArray);  // get the size of the array and store as variable
 
 void setup() {
   // use a for loop to iterate through the array of LED pins
@@ -164,7 +164,7 @@ boolean checkTime(unsigned long &lastTimerExpiredTime, unsigned long timerLength
 //END CheckTime()
 
 
-void changeTrafficLightLEDs(byte NSR, byte NSY, byte NSG, byte EWR, byte EWY, byte EWG) {
+void changeTrafficLightLEDs(unsigned char  NSR, unsigned char  NSY, unsigned char  NSG, unsigned char  EWR, unsigned char  EWY, unsigned char  EWG) {
   digitalWrite(northSouthRed, NSR);
   digitalWrite(northSouthYellow, NSY);
   digitalWrite(northSouthGreen, NSG);
@@ -186,20 +186,6 @@ This is the above traffic light state machine using 6 LEDs on TinkerCad. Click t
 ## New Code Constructs
 
 Up until now we have used `int` for number variables and `long` for big number variables. Additional variable types include, `char` for characters in ASCII, `byte` for small numbers, `float` for 32 bit decimal numbers. [^3]
-
-<div class="responsive-table-markdown">
-
-| Explicit Variable Name | Arduino Equivalent | Bits | Min Value      | Max Value     |
-| ---------------------- | ------------------ | ---- | -------------- | ------------- |
-| int8_t                 | byte               | 8    | 0              | 255           |
-| int8_t                 | char               | 8    | 0              | 255           |
-| uint8_t                | unsigned char      | 8    | 0              | 255           |
-| int16_t                | int                | 16   | -32,768        | +32,767       |
-| uint16_t               | unsigned int       | 16   | 0              | 65,535        |
-| int32_t                | long               | 32   | -2,147,483,648 | 2,147,483,647 |
-| uint32_t               | unsigned long      | 32   | 0              | 4,294,967,295 |
-
-</div>
 
 ### `enum`
 
