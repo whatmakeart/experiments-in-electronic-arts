@@ -11,3 +11,5 @@ Many connectors come in panel mount form, board mount form and cord form. When p
 Each component and wire needs to be either soldered directly to the board or provided a way to connect to a board mount connector. If something needs to be removed to install the board, or if a component has different versions, then a board mount connecter can be a good option. Otherwise it is usually best to solder as much as possible directly to the board.
 
 ### Screw Terminals
+
+[![Screw Terminals](2023-screw-terminals.jpg)](2023-screw-terminals.jpg)
