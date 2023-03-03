@@ -13,3 +13,5 @@ Each component and wire needs to be either soldered directly to the board or pro
 ### Screw Terminals
 
 [![Screw Terminals](2023-screw-terminals.jpg)](2023-screw-terminals.jpg)
+
+Screw terminals are a convenient way to make secure connections that are easily changed. They do not require special connectors. The downside of screw terminals is that on multiple pin connections, one must pay attention to where the wires go unlike a dedicated connector.

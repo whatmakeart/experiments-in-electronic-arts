@@ -14,9 +14,13 @@ Breadboards are used at the beginning of a project to layout a circuit and test 
 
 [![Shift Register Perfboard Soldered](2018-shift-register-perfboard-soldered.jpg)](2018-shift-register-perfboard-soldered.jpg)
 
-This perfboard features a series of shift registers. These expand the input / output or IO of the Arduino to be able to control more pins. Notice how everything is laid out in an orderly fashion.
+This perfboard features a series of shift registers. These expand the input / output or IO of the Arduino to be able to control more pins. The components are laid out in an orderly fashion. Insulated wires make connections between the chips, ceramic capacitors (orange components), and the smaller green screw terminals. Larger blue screw terminals accept DC power.
 
 ### Perfboard
+
+[![Types of Perfboard](2023-perf-boards.jpg)](2023-perf-boards.jpg)
+
+There are many different types of perfboard.
 
 ## Perfboard Layout Resources
 
