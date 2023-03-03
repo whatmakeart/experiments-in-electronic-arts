@@ -8,11 +8,13 @@ draft: false
 
 [![Breadboard Prototype](2017-breadboard-prototype.jpg)](2017-breadboard-prototype.jpg)
 
-Breadboards are used at the beginning of a project to layout a circuit and test if it works. Breadboards are convenient because assembling one is fast and it is easy to make changes. This ease of change is also a liability. Jumper wire connections can easily fall out and sometimes have loose connections.
+Breadboards are used at the beginning of a project to layout a circuit and test if it works. Breadboards are convenient because assembling one is fast and it is easy to make changes. This ease of change is also a liability. Jumper wire connections can easily fall out and sometimes have loose connections. Therefore breadboards are generally not the best choice for anything but a temporary setup. Once a circuit design, function, or layout has been proven on a breadboard it is time to transfer that work to a more permanent setup. Eventually that could mean a custom printed circuit board but that has the costs of design, fabrication, and waiting for the board. The next best thing is a soldered perfboard. Perfboard prototypes offer robust and durable circuits that can be used in long term projects.
 
 ## Perfboard Prototypes
 
 [![Shift Register Perfboard Soldered](2018-shift-register-perfboard-soldered.jpg)](2018-shift-register-perfboard-soldered.jpg)
+
+This perfboard features a series of shift registers. These expand the input / output or IO of the Arduino to be able to control more pins. Notice how everything is laid out in an orderly fashion.
 
 ### Perfboard
 
