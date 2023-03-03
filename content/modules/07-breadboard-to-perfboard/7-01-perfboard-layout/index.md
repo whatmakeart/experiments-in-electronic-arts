@@ -8,6 +8,8 @@ draft: false
 
 [![Breadboard Prototype](2017-breadboard-prototype.jpg)](2017-breadboard-prototype.jpg)
 
+Breadboards are used at the beginning of a project to layout a circuit and test if it works. Breadboards are convenient because assembling one is fast and it is easy to make changes. This ease of change is also a liability. Jumper wire connections can easily fall out and sometimes have loose connections.
+
 ## Perfboard Prototypes
 
 [![Shift Register Perfboard Soldered](2018-shift-register-perfboard-soldered.jpg)](2018-shift-register-perfboard-soldered.jpg)
