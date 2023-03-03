@@ -20,7 +20,15 @@ This perfboard features a series of shift registers. These expand the input / ou
 
 [![Types of Perfboard](2023-perf-boards.jpg)](2023-perf-boards.jpg)
 
-There are many different types of perfboard.
+There are many different types of perfboard. Some perfboard has solder pads on one side only but most quality boards have double sided solder pads. Perfboard can either have all of its solder pads isolated from one another or it can have some of them tied together electrically. If the pads are isolated then an electrical connection must be made between components attached to different pads. This can be done with a solder trace, a continuous glob of solder between the pads, or with a wire connection. Solder traces are a good option for short connections about 1-3 solder pads long, but can become cumbersome on longer runs. For longer connections wire is the best. Silicone insulated wire is better that PVC insulated wire because the silicone can withstand the higher heat of the soldering iron and is more flexible.
+
+#### Breadboard Style Perfboard
+
+Some perfboards are laid out exactly like prototyping breadboards. These perfboards have two power rails on each side and a series of solder pads in the middle that are electrically connected. The advantage of these types of perfboards is that you can transfer your circuit design exactly from the breadboard to the perfboard. This can speed up your project. It can make for a a larger size circuit than if a more compact design was made. Breadboard style perfboards also tend to be more expensive than the individual solder pad style.
+
+### Stripboard
+
+Another type of prototyping board is strip board. These boards have a series of copper strips running along the solder pads. The copper strips electrically connect all of the solder pads in a row. This can make connections between solder pads easy in a single direction. Sometimes one does not want the entire row of solder pads connected. Using a scraper or a drill to remove the copper strip in between two solder pads can break the connection and allow for more complex and compact circuit layouts.
 
 ## Perfboard Layout Resources
 
