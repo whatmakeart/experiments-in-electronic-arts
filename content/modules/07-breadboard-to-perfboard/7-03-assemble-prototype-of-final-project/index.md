@@ -7,6 +7,7 @@ draft: false
 ## Assignment Deliverables
 
 - Physical prototype of project with as many components working as possible. Function and proof of concept demonstrations are more important that looks or appearance.
+- Photo / Video of prototype function uploaded.
 
 ## Assignment Overview
 
