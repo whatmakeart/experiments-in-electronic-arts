@@ -10,7 +10,7 @@ Before spending time designing and fabricating, check to see if there are off th
 
 For low voltage and low current electronics projects, the options for enclosures widens to any found container. This includes everything from a cardboard box to snap together food storage containers.
 
-<div class="image-grid">
+<div class="two-column-grid">
 
 <figure>
 
